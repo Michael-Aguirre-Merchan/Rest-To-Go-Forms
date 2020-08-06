@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Categories} from '../models/categories.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-categories',
@@ -7,7 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  private category: Categories;
+
+  dataForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { 
+
+    this.dataForm = this.fb.group({
+      id: ['', Validators.required],
+      uniqueId: ['', Validators.required],
+      code: ['', Validators.required],
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      imageUrl: ['', Validators.required],
+      parentId: ['', Validators.required],
+      displayOrder: ['', Validators.required],
+      contentUrl: ['', Validators.required],
+      status: ['', Validators.required],
+      enabled: ['', Validators.required],
+      payload: ['', Validators.required],
+    });
+    onsubmit = () => {
+      if (this.dataForm.valid) {
+        this.category = this.dataForm.value;
+        console.log(this.category)
+      }
+    }
+  }
 
   ngOnInit(): void {
   }

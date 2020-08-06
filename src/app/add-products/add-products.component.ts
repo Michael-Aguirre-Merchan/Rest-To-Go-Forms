@@ -16,20 +16,20 @@ export class AddProductsComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
 
     this.dataForm = this.fb.group({
-      id: ['number', Validators.required],
-      uniqueId: ['string', Validators.required],
-      sku: ['string', Validators.required],
-      name: ['string', Validators.required],
-      description: ['string', Validators.required],
-      imageUrl: ['string', Validators.required],
-      contentUrl: ['string', Validators.required],
-      price: ['number', Validators.required],
-      status: ['string', Validators.required],
-      enabled: ['string', Validators.required],
-      openPrice: ['boolean', Validators.required],
-      openStock: ['boolean', Validators.required],
-      payload: ['string', Validators.required],
-      qcode: ['string', Validators.required]  
+      id: ['', Validators.required],
+      uniqueId: ['', Validators.required],
+      sku: ['', Validators.required],
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      imageUrl: ['', Validators.required],
+      contentUrl: ['', Validators.required],
+      price: ['', Validators.required],
+      status: ['', Validators.required],
+      enabled: ['', Validators.required],
+      openPrice: ['', Validators.required],
+      openStock: ['', Validators.required],
+      payload: ['', Validators.required],
+      qcode: ['', Validators.required]  
     });
 
     onsubmit = () => {
