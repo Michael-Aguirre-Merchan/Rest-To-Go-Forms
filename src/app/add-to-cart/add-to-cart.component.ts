@@ -16,9 +16,9 @@ export class AddToCartComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
 
     this.dataForm = this.fb.group({
-      user_unique_id: ['', Validators.required],
+      user_unique_id: ['example-id', Validators.required],
       cartNotes: ['', Validators.required],
-      sku: ['', Validators.required],
+      sku: ['exaple-sku', Validators.required],
       productNotes: ['', Validators.required],
       quantity: ['', Validators.required]
     });

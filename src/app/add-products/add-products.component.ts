@@ -16,7 +16,7 @@ export class AddProductsComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
 
     this.dataForm = this.fb.group({
-      id: ['', Validators.required],
+      id: ['54512', Validators.required],
       uniqueId: ['', Validators.required],
       sku: ['', Validators.required],
       name: ['', Validators.required],

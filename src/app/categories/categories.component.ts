@@ -17,7 +17,7 @@ export class CategoriesComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
 
     this.dataForm = this.fb.group({
-      id: ['', Validators.required],
+      id: ['456251', Validators.required],
       uniqueId: ['', Validators.required],
       code: ['', Validators.required],
       name: ['', Validators.required],
