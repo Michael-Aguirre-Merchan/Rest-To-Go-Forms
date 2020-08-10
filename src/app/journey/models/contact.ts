@@ -1,10 +1,9 @@
 export interface Contact {
 
-    t:string,
-    first_namet:string,
-    middle_namet:string,
-    last_namet:string,
-    primary_emailt:string,
+    first_name:string,
+    middle_name:string,
+    last_name:string,
+    primary_email:string,
     primary_phone:number
 
 }

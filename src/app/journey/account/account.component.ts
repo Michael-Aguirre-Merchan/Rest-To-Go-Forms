@@ -16,8 +16,7 @@ export class AccountComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
 
     this.dataForm = this.fb.group({
-      t: ['', Validators.required],
-      codet: ['', Validators.required],
+      code: ['', Validators.required],
       name: ['', Validators.required]
     });
 

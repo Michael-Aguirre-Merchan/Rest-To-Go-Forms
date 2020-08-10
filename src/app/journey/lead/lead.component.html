@@ -1,1 +1,21 @@
-<p>lead works!</p>
+<h3>Lead</h3>
+
+<form [formGroup]="dataForm" ng-submit="onSubmit()">
+    First Name: <input type="text" placeholder="First Name" formControlName="first_name" /><br>
+    Middle Name: <input type="text" placeholder="Middle Name" formControlName="middle_name" /><br>
+    Last Name: <input type=" text" placeholder="Last Name" formControlName="last_name" /><br>
+    phone_number: <input type="number" placeholder="Primary Email" formControlName="phone_number" /><br>
+    lead_email: <input type="text" placeholder="Primary Phone" formControlName="lead_email" /><br>
+    web_site: <input type=" text" placeholder="Primary Email" formControlName="web_site" /><br>
+    twitter: <input type="text" placeholder="Primary Phone" formControlName="twitter" /><br>
+    fb: <input type=" text" placeholder="Primary Email" formControlName="fb" /><br>
+    instagram: <input type="text" placeholder="Primary Phone" formControlName="instagram" /><br>
+    linkedin: <input type=" text" placeholder="Primary Email" formControlName="linkedin" /><br>
+    youtube: <input type="text" placeholder="Primary Phone" formControlName="youtube" /><br>
+    blog: <input type=" text" placeholder="Primary Email" formControlName="blog" /><br>
+    network_a: <input type="text" placeholder="Primary Phone" formControlName="network_a" /><br>
+    network_b: <input type="text" placeholder="Primary Phone" formControlName="network_b" /><br>
+    notes: <input type="text" placeholder="notes" formControlName="notes" /><br>
+    
+    <button type="submit" class="submit">Submit</button>
+</form>

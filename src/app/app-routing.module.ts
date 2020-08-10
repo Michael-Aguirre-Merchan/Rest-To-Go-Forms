@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { AccountComponent } from './journey/account/account.component';
+import { ContactComponent } from './journey/contact/contact.component';
+import { LeadComponent } from './journey/lead/lead.component';
 
 
 const routes: Routes = [
-  { path: 'journey', loadChildren: () => import('./journey/journey.module').then(m => m.JourneyModule)},
   {
     path: '',
     redirectTo: 'products',
@@ -15,15 +17,27 @@ const routes: Routes = [
   {
     path: 'products',
     component: AddProductsComponent,
-},
-{
-  path: 'categories',
-  component: CategoriesComponent,
-},
-{
-  path: 'cart',
-  component: AddToCartComponent,
-}
+  },
+  {
+    path: 'categories',
+    component: CategoriesComponent,
+  },
+  {
+    path: 'account',
+    component: AccountComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'lead',
+    component: LeadComponent,
+  },
+  {
+    path: 'cart',
+    component: AddToCartComponent,
+  }
 ];
 
 @NgModule({

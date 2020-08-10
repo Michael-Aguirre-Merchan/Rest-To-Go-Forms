@@ -6,37 +6,10 @@ import { LeadComponent } from './lead/lead.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-	{
-		path: '',
-		component: AccountComponent,
-		children: [
-			{
-				path: '',
-				redirectTo: 'account',
-				pathMatch: 'full'
-			},
-			{
-				path: 'account',
-				component: AccountComponent,
-			},
-			{
-				path: 'contact',
-				component: ContactComponent
-      },
-      {
-				path: 'lead',
-				component: LeadComponent
-      }
-		]
-	}
-];
-
 @NgModule({
   declarations: [AccountComponent, ContactComponent, LeadComponent],
   imports: [
     CommonModule,
-	RouterModule.forChild(routes),
 	ReactiveFormsModule
   ]
 })

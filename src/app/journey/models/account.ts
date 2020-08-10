@@ -1,7 +1,6 @@
 export interface Account {
 
-    t:string,
-    codet:string, 
+    code:string, 
     name:string  
      
 }
