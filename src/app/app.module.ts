@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { JourneyModule } from './journey/journey.module'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    JourneyModule,
     ReactiveFormsModule
   ],
   providers: [],
