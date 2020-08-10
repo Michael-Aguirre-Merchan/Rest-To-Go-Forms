@@ -1,1 +1,8 @@
-<p>account works!</p>
+<h3>Account</h3>
+
+<form [formGroup]="dataForm" ng-submit="onSubmit()">
+    T: <input type="text" formControlName="T" placeholder="t" /><br>
+    Codet: <input type="text" placeholder="Codet" formControlName="codet" /><br>
+    Name: <input type="text" placeholder="Name" formControlName="name" /><br>
+    <button type="submit" class="submit">Submit</button>
+</form>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AccountComponent } from './account/account.component';
 import { ContactComponent } from './contact/contact.component';
 import { LeadComponent } from './lead/lead.component';
+import {ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   declarations: [AccountComponent, ContactComponent, LeadComponent],
   imports: [
     CommonModule,
-		RouterModule.forChild(routes),
+	RouterModule.forChild(routes),
+	ReactiveFormsModule
   ]
 })
 export class JourneyModule { }

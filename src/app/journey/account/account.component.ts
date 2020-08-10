@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Account } from '../models/account'
 
 @Component({
   selector: 'app-account',
@@ -7,7 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  private account: Account;
+
+  dataForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { 
+
+    this.dataForm = this.fb.group({
+      t: ['', Validators.required],
+      codet: ['', Validators.required],
+      name: ['', Validators.required]
+    });
+
+    onsubmit = () => {
+      if (this.dataForm.valid) {
+        this.account = this.dataForm.value;
+        console.log(this.account)
+      }
+    }
+  }
 
   ngOnInit(): void {
   }

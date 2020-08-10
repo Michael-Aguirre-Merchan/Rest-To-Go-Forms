@@ -6,7 +6,7 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 
 const routes: Routes = [
-  { path: 'auth', loadChildren: () => import('./journey/journey.module').then(m => m.JourneyModule)},
+  { path: 'journey', loadChildren: () => import('./journey/journey.module').then(m => m.JourneyModule)},
   {
     path: '',
     redirectTo: 'products',
