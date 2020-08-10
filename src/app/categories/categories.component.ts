@@ -21,7 +21,7 @@ export class CategoriesComponent implements OnInit {
       uniqueId: ['', Validators.required],
       code: ['', Validators.required],
       name: ['', Validators.required],
-      description: ['', Validators.required],
+      description: ['desc-example'],
       imageUrl: ['', Validators.required],
       parentId: ['', Validators.required],
       displayOrder: ['', Validators.required],
