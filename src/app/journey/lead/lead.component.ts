@@ -17,7 +17,7 @@ export class LeadComponent implements OnInit {
 
     this.dataForm = this.fb.group({
       first_name: ['', Validators.required],
-      middle_name: ['', Validators.required],
+      middle_name: [''],
       last_name: ['', Validators.required],
       phone_number: ['', Validators.required],
       lead_email: ['', Validators.required],
