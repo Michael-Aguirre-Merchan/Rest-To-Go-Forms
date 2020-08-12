@@ -14,7 +14,11 @@ export class CategoriesComponent implements OnInit {
 
   dataForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {  }
+  
+  ngOnInit(): void { this.initForm(); }
+
+  initForm() {
 
     this.dataForm = this.fb.group({
       id: ['456251', Validators.required],
@@ -36,9 +40,6 @@ export class CategoriesComponent implements OnInit {
         console.log(this.category)
       }
     }
-  }
-
-  ngOnInit(): void {
   }
 
 }

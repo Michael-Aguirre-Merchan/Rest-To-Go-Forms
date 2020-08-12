@@ -13,7 +13,10 @@ export class AddProductsComponent implements OnInit {
 
   dataForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) { }
+  ngOnInit(): void { this.initForm(); }
+
+  initForm() {
 
     this.dataForm = this.fb.group({
       id: ['54512', Validators.required],
@@ -40,7 +43,5 @@ export class AddProductsComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-  }
 
 }

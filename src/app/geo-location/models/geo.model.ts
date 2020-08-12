@@ -1,0 +1,33 @@
+export interface Geo {
+
+    owner_unique_id: string, 
+    owner_type: string,
+    country_code: string,
+    country_name: string,
+    admin1_code: string,
+    admin1_name: string,
+    admin2_code: string,
+    admin2_name: string,
+    admin3_code: string,
+    admin3_name: string,
+    admin4_code: string,
+    admin4_name: string,
+    admin5_code: string,
+    admin5_name: string,
+    admin6_code: string,
+    admin6_name: string
+    postal_code: string,
+    addres: string,
+    premise: string,
+    code: string,
+    name: string,
+    first_name :string,
+    middle_name: string,
+    last_name: string,
+    organization: string,
+    latitude: string, 
+    longitude: string,
+    qcode: string,
+    payload: string,
+    
+}

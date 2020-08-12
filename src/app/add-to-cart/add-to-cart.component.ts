@@ -13,8 +13,12 @@ export class AddToCartComponent implements OnInit {
 
   dataForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) { }
+  
+  ngOnInit(): void { this.initForm(); }
 
+  initForm() {
+    
     this.dataForm = this.fb.group({
       user_unique_id: ['example-id', Validators.required],
       cartNotes: [''],
@@ -29,10 +33,6 @@ export class AddToCartComponent implements OnInit {
         console.log(this.AddToCart)
       }
     }
-  }
-
-
-  ngOnInit(): void {
   }
 
 }

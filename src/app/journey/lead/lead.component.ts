@@ -13,7 +13,11 @@ export class LeadComponent implements OnInit {
 
   dataForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit(): void { this.initForm(); }
+
+  initForm() {
 
     this.dataForm = this.fb.group({
       first_name: ['', Validators.required],
@@ -40,8 +44,4 @@ export class LeadComponent implements OnInit {
       }
     }
   }
-
-  ngOnInit(): void {
-  }
-
 }

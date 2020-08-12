@@ -1,0 +1,46 @@
+<h3>Geo</h3>
+
+<form [formGroup]="dataForm" ng-submit="onSubmit()">
+
+    owner_unique_id: <input disabled type="text" placeholder="owner_unique_id" formControlName="owner_unique_id" /><br>
+    owner_type: 
+    <select name="owner_type" formControlName="owner_type">
+        <option value="User">User</option>
+        <option value="Contact">Contact</option>
+        <option value="Account">Account</option>
+        <option value="Other">Other</option>
+        <option value="Unknown">Unknown</option>
+    </select><br>
+    country_code: <input disabled type="text" placeholder="country_code" formControlName="country_code" /><br>
+    country_name: <input type="text" placeholder="country_name" formControlName="country_name" /><br>
+    admin1_code: <input disabled type="text" formControlName="admin1_code" placeholder="admin1_code" /><br>
+    admin1_name: <input type="text" formControlName="admin1_code" placeholder="admin1_code" /><br>
+    admin2_code: <input disabled type="text" formControlName="admin2_code" placeholder="admin2_code" /><br>
+    admin2_name: <input type="text" formControlName="admin2_name" placeholder="admin2_name" /><br>
+    admin3_code: <input disabled type="text" formControlName="admin3_code" placeholder="admin3_code" /><br>
+    admin3_name: <input type="text" formControlName="admin3_name" placeholder="admin3_name" /><br>
+    admin4_code: <input disabled type="text" formControlName="admin4_code" placeholder="admin4_code" /><br>
+    admin4_name: <input type="text" formControlName="admin4_name" placeholder="admin4_name" /><br>
+    admin5_code: <input disabled type="text" formControlName="admin5_code" placeholder="admin5_code" /><br>
+    admin5_name: <input type="text" formControlName="admin5_name" placeholder="admin5_name" /><br>
+    admin6_code: <input disabled type="text" formControlName="admin6_code" placeholder="admin6_code" /><br>
+    admin6_name: <input type="text" formControlName="admin6_name" placeholder="admin6_name" /><br>
+    postal_code: <input type="text" formControlName="postal_code" placeholder="postal_code" /><br>
+    addres: <input type="text" formControlName="addres" placeholder="addres" /><br>
+    premise: <input type="text" formControlName="premise" placeholder="premise" /><br>
+    code: <input type="text" formControlName="code" placeholder="code" /><br>
+    name: <input type="text" formControlName="name" placeholder="name" /><br>
+    first_name: <input type="text" formControlName="first_name" placeholder="first_name" /><br>
+    middle_name: <input type="text" formControlName="middle_name" placeholder="middle_name" /><br>
+    last_name: <input type="text" formControlName="last_name" placeholder="last_name" /><br>
+    organization: <input type="text" formControlName="organization" placeholder="organization" /><br>
+    latitude: <input disabled type="text" formControlName="latitude" placeholder="latitude" /><br>
+    longitude: <input disabled type="text" formControlName="longitude" placeholder="longitude" /><br>
+    qcode: <input disabled type="text" formControlName="qcode" placeholder="qcode" /><br>
+    payload: <input disabled type="text" formControlName="payload" placeholder="payload" /><br>
+    <button type="submit" class="submit">Submit</button>
+
+</form>
+
+{{lat}}
+{{lng}}
