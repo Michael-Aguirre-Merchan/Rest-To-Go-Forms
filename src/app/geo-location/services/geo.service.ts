@@ -15,10 +15,7 @@ export class GeoService {
   }
  
   getRes(myform: Geo) {
-    const data = {
-      ...myform,
-      payload: JSON.stringify(myform.payload)
-    }
+    const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({
         'APPID': this.app_id,

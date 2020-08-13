@@ -13,6 +13,8 @@ export class LeadComponent implements OnInit {
 
   dataForm: FormGroup;
 
+  loading = false;
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void { this.initForm(); }
@@ -36,12 +38,14 @@ export class LeadComponent implements OnInit {
       network_b: [''],
       notes: [''],
     });
-
-    onsubmit = () => {
-      if (this.dataForm.valid) {
-        this.lead = this.dataForm.value;
-        console.log(this.lead)
-      }
+  }
+  Submit() {
+    if (this.dataForm.valid) {
+      this.lead = this.dataForm.value;
+      console.log(this.lead)
     }
+  }
+  ngOnDestroy(): void {
+    this.loading = false;
   }
 }

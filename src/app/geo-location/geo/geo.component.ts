@@ -13,9 +13,11 @@ export class GeoComponent implements OnInit {
 lat;
 lng; 
 
-private geo: Geo;
+  private geo: Geo;
 
   constructor(private fb: FormBuilder) { }
+
+  loading = false;
 
   ngOnInit( ): void {
     this.initForm();
@@ -64,12 +66,14 @@ private geo: Geo;
       qcode: ['', Validators.required],
       payload: ['', Validators.required],
     });
-
-    onsubmit = () => {
-      if (this.dataForm.valid) {
-        this.geo = this.dataForm.value;
-        console.log(this.geo)
-      }
+  }
+  Submit() {
+    if (this.dataForm.valid) {
+      this.geo = this.dataForm.value;
+      console.log(this.geo)
     }
+  }
+  ngOnDestroy(): void {
+    this.loading = false;
   }
 }

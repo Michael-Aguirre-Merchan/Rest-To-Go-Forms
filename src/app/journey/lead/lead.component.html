@@ -1,21 +1,102 @@
-<h3>Lead</h3>
-
-<form [formGroup]="dataForm" ng-submit="onSubmit()">
-    First Name: <input type="text" placeholder="First Name" formControlName="first_name" /><br>
-    Middle Name: <input type="text" placeholder="Middle Name" formControlName="middle_name" /><br>
-    Last Name: <input type=" text" placeholder="Last Name" formControlName="last_name" /><br>
-    phone_number: <input type="number" placeholder="Primary Email" formControlName="phone_number" /><br>
-    lead_email: <input type="text" placeholder="Primary Phone" formControlName="lead_email" /><br>
-    web_site: <input type=" text" placeholder="Primary Email" formControlName="web_site" /><br>
-    twitter: <input type="text" placeholder="Primary Phone" formControlName="twitter" /><br>
-    fb: <input type=" text" placeholder="Primary Email" formControlName="fb" /><br>
-    instagram: <input type="text" placeholder="Primary Phone" formControlName="instagram" /><br>
-    linkedin: <input type=" text" placeholder="Primary Email" formControlName="linkedin" /><br>
-    youtube: <input type="text" placeholder="Primary Phone" formControlName="youtube" /><br>
-    blog: <input type=" text" placeholder="Primary Email" formControlName="blog" /><br>
-    network_a: <input type="text" placeholder="Primary Phone" formControlName="network_a" /><br>
-    network_b: <input type="text" placeholder="Primary Phone" formControlName="network_b" /><br>
-    notes: <input type="text" placeholder="notes" formControlName="notes" /><br>
-    
-    <button type="submit" class="submit">Submit</button>
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+<form [formGroup]="dataForm">
+    <div class="form-group">
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" placeholder="First Name" formControlName="first_name">
+            <mat-error>First Name is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Middle Name</mat-label>
+            <input matInput type="text" placeholder="Middle Name" formControlName="middle_name">
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" placeholder="Last Name" formControlName="last_name">
+            <mat-error>Last Name is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput type="text" placeholder="Phone Number" formControlName="phone_number">
+            <mat-error>Phone Number is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Lead Email</mat-label>
+            <input matInput type="text" placeholder="Lead Email" formControlName="lead_email">
+            <mat-error>Lead Email is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Web Site</mat-label>
+            <input matInput type="text" placeholder="Web Site" formControlName="web_site">
+            <mat-error>Web Site is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Twitter</mat-label>
+            <input matInput type="text" placeholder="Twitter" formControlName="twitter">
+            <mat-error>Twitter is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Facebook</mat-label>
+            <input matInput type="text" placeholder="Facebook" formControlName="fb">
+            <mat-error>Facebook is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Instagram</mat-label>
+            <input matInput type="text" placeholder="Instagram" formControlName="instagram">
+            <mat-error>Instagram is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Linkedin</mat-label>
+            <input matInput type="text" placeholder="Linkedin" formControlName="linkedin">
+            <mat-error>Linkedin is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Youtube</mat-label>
+            <input matInput type="text" placeholder="Youtube" formControlName="youtube">
+            <mat-error>Youtube is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Blog</mat-label>
+            <input matInput type="text" placeholder="Blog" formControlName="blog">
+            <mat-error>Blog is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Network A</mat-label>
+            <input matInput type="text" placeholder="Network A" formControlName="network_a">
+            <mat-error>Network A is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Network B</mat-label>
+            <input matInput type="text" placeholder="Network B" formControlName="network_b">
+            <mat-error>Network B is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Notes</mat-label>
+            <input matInput type="text" placeholder="Notes" formControlName="notes">
+            <mat-error>Notes is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <!--  <button (click)="Submit()"
+                                [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                        -->
+    </div>
 </form>
+<!-- </kt-portlet-body>
+                                         <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                                     </kt-portle>-->

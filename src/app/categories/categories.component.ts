@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Categories} from '../models/categories.model';
+import { Categories } from '../models/categories.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
@@ -14,18 +14,20 @@ export class CategoriesComponent implements OnInit {
 
   dataForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {  }
-  
+  loading = false;
+
+  constructor(private fb: FormBuilder) { }
+
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
 
     this.dataForm = this.fb.group({
-      id: ['456251', Validators.required],
+      id: ['', Validators.required],
       uniqueId: ['', Validators.required],
       code: ['', Validators.required],
       name: ['', Validators.required],
-      description: ['desc-example'],
+      description: [''],
       imageUrl: ['', Validators.required],
       parentId: ['', Validators.required],
       displayOrder: ['', Validators.required],
@@ -34,12 +36,14 @@ export class CategoriesComponent implements OnInit {
       enabled: ['', Validators.required],
       payload: ['', Validators.required],
     });
-    onsubmit = () => {
-      if (this.dataForm.valid) {
-        this.category = this.dataForm.value;
-        console.log(this.category)
-      }
+  }
+  Submit() {
+    if (this.dataForm.valid) {
+      this.category = this.dataForm.value;
+      console.log(this.category)
     }
   }
-
+  ngOnDestroy(): void {
+    this.loading = false;
+  }
 }

@@ -13,17 +13,19 @@ export class AddProductsComponent implements OnInit {
 
   dataForm: FormGroup;
 
+  loading = false;
+
   constructor(private fb: FormBuilder) { }
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
 
     this.dataForm = this.fb.group({
-      id: ['54512', Validators.required],
+      id: ['', Validators.required],
       uniqueId: ['', Validators.required],
       sku: ['', Validators.required],
       name: ['', Validators.required],
-      description: ['desc-example'],
+      description: [''],
       imageUrl: ['', Validators.required],
       contentUrl: [''],
       price: ['', Validators.required],
@@ -34,14 +36,14 @@ export class AddProductsComponent implements OnInit {
       payload: ['', Validators.required],
       qcode: ['', Validators.required]  
     });
-
-    onsubmit = () => {
+  }
+    Submit()  {
       if (this.dataForm.valid) {
         this.product = this.dataForm.value;
         console.log(this.product)
       }
     }
+    ngOnDestroy(): void {
+      this.loading = false;
   }
-
-
-}
+  }

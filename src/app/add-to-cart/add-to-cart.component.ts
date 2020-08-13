@@ -13,6 +13,8 @@ export class AddToCartComponent implements OnInit {
 
   dataForm: FormGroup;
 
+  loading = false;
+
   constructor(private fb: FormBuilder) { }
   
   ngOnInit(): void { this.initForm(); }
@@ -20,19 +22,21 @@ export class AddToCartComponent implements OnInit {
   initForm() {
     
     this.dataForm = this.fb.group({
-      user_unique_id: ['example-id', Validators.required],
+      user_unique_id: ['', Validators.required],
       cartNotes: [''],
-      sku: ['exaple-sku', Validators.required],
+      sku: ['', Validators.required],
       productNotes: [''],
       quantity: ['', Validators.required]
     });
-
-    onsubmit = () => {
-      if (this.dataForm.valid) {
-        this.AddToCart = this.dataForm.value;
-        console.log(this.AddToCart)
-      }
+  }
+  Submit()  {
+    if (this.dataForm.valid) {
+      this.AddToCart = this.dataForm.value;
+      console.log(this.AddToCart)
     }
   }
+  ngOnDestroy(): void {
+    this.loading = false;
+}
 
 }

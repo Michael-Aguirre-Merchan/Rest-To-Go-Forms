@@ -1,90 +1,89 @@
-<kt-portle>
+<!--<kt-portle>
     <kt-portlet-header title="Products"> </kt-portlet-header>
-    <kt-portlet-body>
-        <form [formGroup]="dataForm">
-            <div class="form-group">
-                <mat-form-field appearance="outline">
-                    <mat-label>Id</mat-label>
-                    <input matInput type="number" placeholder="Id" formControlName="id">
-                    <mat-error>Id is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Unique Id</mat-label>
-                    <input matInput type="text" placeholder="Unique Id" formControlName="uniqueId">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Sku</mat-label>
-                    <input matInput type="text" placeholder="Sku" formControlName="sku">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Name</mat-label>
-                    <input matInput type="text" placeholder="Your name" formControlName="name">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Description</mat-label>
-                    <input matInput type="text" placeholder="Description" formControlName="description">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Image Url</mat-label>
-                    <input matInput type="text" placeholder="Image Url" formControlName="imageUrl">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Content Url</mat-label>
-                    <input matInput type="text" placeholder="Content Url" formControlName="contentUrl">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Price</mat-label>
-                    <input matInput type="number" placeholder="Price" formControlName="price">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Enabled</mat-label>
-                    <input matInput type="text" placeholder="Enabled" formControlName="enabled">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Open Price</mat-label>
-                    <input matInput type="number" placeholder=" Open Price" formControlName="openPrice">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Open Stock</mat-label>
-                    <input matInput type="text" placeholder="Open Stock" formControlName="openStock">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Payload</mat-label>
-                    <input matInput type="text" placeholder="Payload" formControlName="payload">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Qcode</mat-label>
-                    <input matInput type="text" placeholder="Qcode" formControlName="qcode">
-                    <mat-error>Page Url is required </mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <button (click)="submit()"
+    <kt-portlet-body>-->
+<form [formGroup]="dataForm">
+    <div class="form-group">
+        <mat-form-field appearance="outline">
+            <mat-label>Id</mat-label>
+            <input matInput type="number" placeholder="Id" formControlName="id">
+            <mat-error>Id is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Unique Id</mat-label>
+            <input matInput type="text" placeholder="Unique Id" formControlName="uniqueId">
+            <mat-error>Unique Id is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Sku</mat-label>
+            <input matInput type="text" placeholder="Sku" formControlName="sku">
+            <mat-error>Sku is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Your name" formControlName="name">
+            <mat-error>Page Url is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input matInput type="text" placeholder="Description" formControlName="description">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Image Url</mat-label>
+            <input matInput type="text" placeholder="Image Url" formControlName="imageUrl">
+            <mat-error>Image Url</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Content Url</mat-label>
+            <input matInput type="text" placeholder="Content Url" formControlName="contentUrl">
+            <mat-error>Content Url is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput type="number" placeholder="Price" formControlName="price">
+            <mat-error>Price is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Enabled</mat-label>
+            <input matInput type="text" placeholder="Enabled" formControlName="enabled">
+            <mat-error>Enabled is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Open Price</mat-label>
+            <input matInput type="number" placeholder=" Open Price" formControlName="openPrice">
+            <mat-error>Open Price is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Open Stock</mat-label>
+            <input matInput type="text" placeholder="Open Stock" formControlName="openStock">
+            <mat-error>Open Stock is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Payload</mat-label>
+            <input matInput type="text" placeholder="Payload" formControlName="payload">
+            <mat-error>Payload is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Qcode</mat-label>
+            <input matInput type="text" placeholder="Qcode" formControlName="qcode">
+            <mat-error>Qcode is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <!--  <button (click)="Submit()"
                     [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
-            </div>
-        </form>
-    </kt-portlet-body>
+            -->
+    </div>
+</form>
+<!-- </kt-portlet-body>
     <kt-portlet-footer> (footer info) </kt-portlet-footer>
-</kt-portle>
+</kt-portle>-->

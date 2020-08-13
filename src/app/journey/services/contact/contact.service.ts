@@ -17,9 +17,7 @@ export class ContactService {
   }
  
   getRes(myform: Contact) {
-    const data = {
-      ...myform
-    }
+    const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({
         'APPID': this.app_id,

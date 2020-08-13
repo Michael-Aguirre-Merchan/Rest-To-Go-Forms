@@ -16,9 +16,7 @@ export class LeadService {
   }
  
   getRes(myform: Lead) {
-    const data = {
-      ...myform
-    }
+    const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({
         'APPID': this.app_id,

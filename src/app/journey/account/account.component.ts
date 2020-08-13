@@ -13,6 +13,8 @@ export class AccountComponent implements OnInit {
 
   dataForm: FormGroup;
 
+  loading = false;
+
   constructor(private fb: FormBuilder) { }
   ngOnInit(): void { this.initForm(); }
 
@@ -22,12 +24,14 @@ export class AccountComponent implements OnInit {
       code: ['', Validators.required],
       name: ['', Validators.required]
     });
-
-    onsubmit = () => {
-      if (this.dataForm.valid) {
-        this.account = this.dataForm.value;
-        console.log(this.account)
-      }
+  }
+  Submit() {
+    if (this.dataForm.valid) {
+      this.account = this.dataForm.value;
+      console.log(this.account)
     }
+  }
+  ngOnDestroy(): void {
+    this.loading = false;
   }
 }

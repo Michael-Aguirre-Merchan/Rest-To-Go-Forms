@@ -16,10 +16,7 @@ export class PostformService {
   }
  
   getRes(myform: Categories) {
-    const data = {
-      ...myform,
-      payload: JSON.stringify(myform.payload),
-    }
+    const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({
         'APPID': this.app_id,

@@ -1,10 +1,43 @@
-<h3>Add To Cart</h3>
-
-<form [formGroup]="dataForm" ng-submit="onSubmit()">
-    user_unique_id: <input disabled type=" text" placeholder="user_unique_id" formControlName="user_unique_id" /><br>
-    Cart Notes: <input type=" text" placeholder="Cart Notes" formControlName="cartNotes" /><br>
-    Sku: <input disabled type=" text" placeholder="Sku" formControlName="sku" /><br>
-    Product Notes: <input type=" text" placeholder="Product Notes" formControlName="productNotes" /><br>
-    Quantity: <input type="number" formControlName="quantity" placeholder="Quantity" /><br>
-    <button type="submit" class="submit">Submit</button>
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+<form [formGroup]="dataForm">
+    <div class="form-group">
+        <mat-form-field appearance="outline">
+            <mat-label>User Unique Id</mat-label>
+            <input matInput type="text" placeholder="User Unique Id" formControlName="user_unique_id">
+            <mat-error>User Unique Id is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Cart Notes</mat-label>
+            <input matInput type="text" placeholder="Cart Notes" formControlName="cartNotes">
+            <mat-error>Cart Notes is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Sku</mat-label>
+            <input matInput type="text" placeholder="Sku" formControlName="sku">
+            <mat-error>Sku is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Notes</mat-label>
+            <input matInput type="text" placeholder="Product Notes" formControlName="productNotes">
+            <mat-error>Product Notes is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Quantity</mat-label>
+            <input matInput type="text" placeholder="Quantity" formControlName="quantity">
+            <mat-error>Quantity is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <!--  <button (click)="Submit()"
+                    [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+            -->
+    </div>
 </form>
+<!-- </kt-portlet-body>
+         <kt-portlet-footer> (footer info) </kt-portlet-footer>
+     </kt-portle>-->

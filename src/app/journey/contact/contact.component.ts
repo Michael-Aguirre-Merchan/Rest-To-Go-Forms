@@ -13,8 +13,10 @@ export class ContactComponent implements OnInit {
 
   dataForm: FormGroup;
 
+  loading = false;
+
   constructor(private fb: FormBuilder) { }
-  
+
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
@@ -26,12 +28,14 @@ export class ContactComponent implements OnInit {
       primary_email: ['', Validators.required],
       primary_phone: ['', Validators.required],
     });
-
-    onsubmit = () => {
-      if (this.dataForm.valid) {
-        this.contact = this.dataForm.value;
-        console.log(this.contact)
-      }
+  }
+  Submit() {
+    if (this.dataForm.valid) {
+      this.contact = this.dataForm.value;
+      console.log(this.contact)
     }
+  }
+  ngOnDestroy(): void {
+    this.loading = false;
   }
 }
