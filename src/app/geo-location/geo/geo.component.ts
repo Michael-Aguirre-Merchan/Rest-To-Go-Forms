@@ -67,7 +67,7 @@ lng;
       payload: ['', Validators.required],
     });
   }
-  Submit() {
+  submit() {
     if (this.dataForm.valid) {
       this.geo = this.dataForm.value;
       console.log(this.geo)

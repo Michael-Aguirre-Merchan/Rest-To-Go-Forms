@@ -37,7 +37,7 @@ export class CategoriesComponent implements OnInit {
       payload: ['', Validators.required],
     });
   }
-  Submit() {
+  submit() {
     if (this.dataForm.valid) {
       this.category = this.dataForm.value;
       console.log(this.category)

@@ -37,7 +37,7 @@ export class AddProductsComponent implements OnInit {
       qcode: ['', Validators.required]  
     });
   }
-    Submit()  {
+    submit()  {
       if (this.dataForm.valid) {
         this.product = this.dataForm.value;
         console.log(this.product)

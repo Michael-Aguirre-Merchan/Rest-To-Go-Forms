@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
       primary_phone: ['', Validators.required],
     });
   }
-  Submit() {
+  submit() {
     if (this.dataForm.valid) {
       this.contact = this.dataForm.value;
       console.log(this.contact)

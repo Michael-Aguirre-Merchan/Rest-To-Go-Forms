@@ -29,7 +29,7 @@ export class AddToCartComponent implements OnInit {
       quantity: ['', Validators.required]
     });
   }
-  Submit()  {
+  submit()  {
     if (this.dataForm.valid) {
       this.AddToCart = this.dataForm.value;
       console.log(this.AddToCart)

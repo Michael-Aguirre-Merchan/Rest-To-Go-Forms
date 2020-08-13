@@ -39,7 +39,7 @@ export class LeadComponent implements OnInit {
       notes: [''],
     });
   }
-  Submit() {
+  submit() {
     if (this.dataForm.valid) {
       this.lead = this.dataForm.value;
       console.log(this.lead)

@@ -25,7 +25,7 @@ export class AccountComponent implements OnInit {
       name: ['', Validators.required]
     });
   }
-  Submit() {
+  submit() {
     if (this.dataForm.valid) {
       this.account = this.dataForm.value;
       console.log(this.account)
