@@ -1,187 +1,179 @@
 <!--<kt-portle>
     <kt-portlet-header title="Products"> </kt-portlet-header>
     <kt-portlet-body>-->
-        <form [formGroup]="dataForm">
-            <div class="form-group">
-                <mat-form-field appearance="outline">
-                    <mat-label>Owner Unique Id</mat-label>
-                    <input matInput type="text" placeholder="Owner Unique Id" formControlName="owner_unique_id">
-                    <mat-error>Owner Unique Id is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Owner Type</mat-label>
-                    <input matInput type="text" placeholder="Owner Type" formControlName="owner_type">
-                    <mat-error>Owner Type is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Country Code</mat-label>
-                    <input matInput type="text" placeholder="Country Code" formControlName="country_code">
-                    <mat-error>Country Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Country Name</mat-label>
-                    <input matInput type="text" placeholder="Country Name" formControlName="country_name">
-                    <mat-error>Country Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin1 Code</mat-label>
-                    <input matInput type="text" placeholder="Admin1 Code" formControlName="admin1_code">
-                    <mat-error>Admin1 Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin1 Name</mat-label>
-                    <input matInput type="text" placeholder="Admin1 Name" formControlName="admin1_name">
-                    <mat-error>Admin1 Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin2 Code</mat-label>
-                    <input matInput type="text" placeholder="Admin2 Code" formControlName="admin2_code">
-                    <mat-error>Admin2 Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin2 Name</mat-label>
-                    <input matInput type="text" placeholder="Admin2 Name" formControlName="admin2_name">
-                    <mat-error>Admin2 Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin3 Code</mat-label>
-                    <input matInput type="text" placeholder="Admin3 Code" formControlName="admin3_code">
-                    <mat-error>Admin3 Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin3 Name</mat-label>
-                    <input matInput type="text" placeholder="Admin3 Name" formControlName="admin3_name">
-                    <mat-error>Admin3 Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin4 Code</mat-label>
-                    <input matInput type="text" placeholder="Admin4 Code" formControlName="admin4_code">
-                    <mat-error>Admin4 Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin4 Name</mat-label>
-                    <input matInput type="text" placeholder="Admin4 Name" formControlName="admin4_name">
-                    <mat-error>Admin4 Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin5 Code</mat-label>
-                    <input matInput type="text" placeholder="Admin5 Code" formControlName="admin5_code">
-                    <mat-error>Admin5 Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin5 Name</mat-label>
-                    <input matInput type="text" placeholder="Admin5 Name" formControlName="admin5_name">
-                    <mat-error>Admin5 Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin6 Code</mat-label>
-                    <input matInput type="text" placeholder="Admin6 Code" formControlName="admin6_code">
-                    <mat-error>Admin6 Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Admin6 Name</mat-label>
-                    <input matInput type="text" placeholder="Admin6 Name" formControlName="admin6_name">
-                    <mat-error>Admin6 Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Postal Code</mat-label>
-                    <input matInput type="text" placeholder="Postal Code" formControlName="postal_code">
-                    <mat-error>Postal Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Addres</mat-label>
-                    <input matInput type="text" placeholder="Addres" formControlName="addres">
-                    <mat-error>Addres is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Premise</mat-label>
-                    <input matInput type="text" placeholder="Premise" formControlName="premise">
-                    <mat-error>Premise is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Code</mat-label>
-                    <input matInput type="text" placeholder="Code" formControlName="code">
-                    <mat-error>Code is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Name</mat-label>
-                    <input matInput type="text" placeholder="Name" formControlName="name">
-                    <mat-error>Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>First Name</mat-label>
-                    <input matInput type="text" placeholder="First Name" formControlName="first_name">
-                    <mat-error>First Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Middle Name</mat-label>
-                    <input matInput type="text" placeholder="Middle Name" formControlName="middle_name">
-                    <mat-error>Middle Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Last Name</mat-label>
-                    <input matInput type="text" placeholder="Last Name" formControlName="last_name">
-                    <mat-error>Last Name is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Organization</mat-label>
-                    <input matInput type="text" placeholder="Organization" formControlName="organization">
-                    <mat-error>Organization is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Latitude</mat-label>
-                    <input matInput type="text" placeholder="Latitude" formControlName="latitude">
-                    <mat-error>Latitude is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Longitude</mat-label>
-                    <input matInput type="text" placeholder="Longitude" formControlName="longitude">
-                    <mat-error>Longitude is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Qcode</mat-label>
-                    <input matInput type="text" placeholder="Qcode" formControlName="qcode">
-                    <mat-error>Qcode is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                    <mat-label>Payload</mat-label>
-                    <input matInput type="text" placeholder="Payload" formControlName="payload">
-                    <mat-error>Payload is required</mat-error>
-                    <mat-hint></mat-hint>
-                </mat-form-field>
-<!--  <button (click)="submit()"
+<form [formGroup]="dataForm">
+    <div class="form-group">
+        <mat-form-field appearance="outline">
+            <mat-label>Owner Unique Id</mat-label>
+            <input matInput type="text" placeholder="Owner Unique Id" formControlName="owner_unique_id">
+            <mat-error>Owner Unique Id is required</mat-error>
+            <mat-hint>Who owns this address?</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Owner Type</mat-label>
+            <input matInput type="text" placeholder="Owner Type" formControlName="owner_type">
+            <mat-error>Owner Type is required</mat-error>
+            <mat-hint>Who owns this address? User/Contact/Account/Other/Unknown</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Country Code</mat-label>
+            <input matInput type="text" placeholder="Country Code" formControlName="country_code">
+            <mat-error>Country Code is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Country Name</mat-label>
+            <input matInput type="text" placeholder="Country Name" formControlName="country_name">
+            <mat-error>Country Name is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>State Code</mat-label>
+            <input matInput type="text" placeholder="State Code" formControlName="admin1_code">
+            <mat-error>State Code is required</mat-error>
+            <mat-hint>State, ie; Antioquia / Colorado</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>State Name</mat-label>
+            <input matInput type="text" placeholder="State Name" formControlName="admin1_name">
+            <mat-error>State Name is required</mat-error>
+            <mat-hint>State, ie; Antioquia / Colorado</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>County Code</mat-label>
+            <input matInput type="text" placeholder="County Code" formControlName="admin2_code">
+            <mat-error>County Code is required</mat-error>
+            <mat-hint>County, ie; Medellin / Boulder County</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>County Name</mat-label>
+            <input matInput type="text" placeholder="County Name" formControlName="admin2_name">
+            <mat-error>County Name is required</mat-error>
+            <mat-hint>County, ie; Medellin / Boulder County</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>City Code</mat-label>
+            <input matInput type="text" placeholder="City Code" formControlName="admin3_code">
+            <mat-error>City Code is required</mat-error>
+            <mat-hint>City, ie; Medellin / Boulder City</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>City Name</mat-label>
+            <input matInput type="text" placeholder="City Name" formControlName="admin3_name">
+            <mat-error>City Name is required</mat-error>
+            <mat-hint>City, ie; Medellin / Boulder City</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Admin4 Code</mat-label>
+            <input matInput type="text" placeholder="Admin4 Code" formControlName="admin4_code">
+            <mat-error>Admin4 Code is required</mat-error>
+            <mat-hint>Admin4, ie; Comuna 15</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Admin4 Name</mat-label>
+            <input matInput type="text" placeholder="Admin4 Name" formControlName="admin4_name">
+            <mat-error>Admin4 Name is required</mat-error>
+            <mat-hint>Admin4, ie; Comuna 15</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Neighborhood Code</mat-label>
+            <input matInput type="text" placeholder="Neighborhood Code" formControlName="admin5_code">
+            <mat-error>Neighborhood Code is required</mat-error>
+            <mat-hint>Neighborhood, ie; La America / The Boulders</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Neighborhood Name</mat-label>
+            <input matInput type="text" placeholder="Neighborhood Name" formControlName="admin5_name">
+            <mat-error>Neighborhood Name is required</mat-error>
+            <mat-hint>Neighborhood, ie; La America / The Boulders</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Admin6 Code</mat-label>
+            <input matInput type="text" placeholder="Admin6 Code" formControlName="admin6_code">
+            <mat-hint>Admin6, ie; Edificio el Palmar / 2896 Building</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Admin6 Name</mat-label>
+            <input matInput type="text" placeholder="Admin6 Name" formControlName="admin6_name">
+            <mat-error>Admin6 Name is required</mat-error>
+            <mat-hint>Admin6, ie; Edificio el Palmar / 2896 Building</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Postal Code</mat-label>
+            <input matInput type="text" placeholder="Postal Code" formControlName="postal_code">
+            <mat-error>Postal Code is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Addres</mat-label>
+            <input matInput type="text" placeholder="Addres" formControlName="addres">
+            <mat-error>Addres is required</mat-error>
+            <mat-hint>Street Number, ie: 2896 Kalmia Av. / Cra 42b No. 87c-23</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Premise</mat-label>
+            <input matInput type="text" placeholder="Premise" formControlName="premise">
+            <mat-hint>Apto 203, Apto 202</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Code</mat-label>
+            <input matInput type="text" placeholder="Code" formControlName="code">
+            <mat-error>Code is required</mat-error>
+            <mat-hint>H001 / H002</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Name" formControlName="name">
+            <mat-error>Name is required</mat-error>
+            <mat-hint>Casa de Rachel / Grandma's Home</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" placeholder="First Name" formControlName="first_name">
+            <mat-error>First Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Middle Name</mat-label>
+            <input matInput type="text" placeholder="Middle Name" formControlName="middle_name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" placeholder="Last Name" formControlName="last_name">
+            <mat-error>Last Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Organization</mat-label>
+            <input matInput type="text" placeholder="Organization" formControlName="organization">
+            <mat-hint>NA / 3Metas</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Latitude</mat-label>
+            <input matInput type="number" placeholder="Latitude" formControlName="latitude">
+            <mat-error>Latitude is required</mat-error>
+            <mat-hint>Where is this Address - Latitude</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Longitude</mat-label>
+            <input matInput type="number" placeholder="Longitude" formControlName="longitude">
+            <mat-error>Longitude is required</mat-error>
+            <mat-hint>Where is this Address - Longitude</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Qcode</mat-label>
+            <input matInput type="text" placeholder="Qcode" formControlName="qcode">
+            <mat-error>Qcode is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Payload</mat-label>
+            <input matInput type="text" placeholder="Payload" formControlName="payload">
+            <mat-hint>Extra information for the Address. ie: color:"blue", floor: "second"</mat-hint>
+        </mat-form-field>
+        <!--  <button (click)="submit()"
                     [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
             -->
-        </div>
-    </form>
-    <!-- </kt-portlet-body>
+    </div>
+</form>
+<!-- </kt-portlet-body>
              <kt-portlet-footer> (footer info) </kt-portlet-footer>
          </kt-portle>-->
