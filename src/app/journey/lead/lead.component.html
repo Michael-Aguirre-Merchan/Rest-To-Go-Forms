@@ -7,19 +7,24 @@
             <mat-label>First Name</mat-label>
             <input matInput type="text" placeholder="First Name" formControlName="first_name">
             <mat-error>First Name is required </mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Middle Name</mat-label>
             <input matInput type="text" placeholder="Middle Name" formControlName="middle_name">
+            <mat-error></mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
             <input matInput type="text" placeholder="Last Name" formControlName="last_name">
             <mat-error>Last Name is required </mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Phone Number</mat-label>
-            <input matInput type="tel" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" placeholder="Phone Number" formControlName="phone_number">
+            <input matInput type="tel" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" placeholder="Phone Number"
+                formControlName="phone_number">
             <mat-error>Phone Number Invalid</mat-error>
             <mat-hint></mat-hint>
         </mat-form-field>
@@ -32,36 +37,43 @@
         <mat-form-field appearance="outline">
             <mat-label>Web Site</mat-label>
             <input matInput type="url" placeholder="Web Site" formControlName="web_site">
+            <mat-error></mat-error>
             <mat-hint>Do you have a web site?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Twitter</mat-label>
             <input matInput type="url" placeholder="Twitter" formControlName="twitter">
+            <mat-error></mat-error>
             <mat-hint>Do you have a Twitter account?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Facebook</mat-label>
             <input matInput type="url" placeholder="Facebook" formControlName="fb">
+            <mat-error></mat-error>
             <mat-hint>Do you have a Facebook account?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Instagram</mat-label>
             <input matInput type="url" placeholder="Instagram" formControlName="instagram">
+            <mat-error></mat-error>
             <mat-hint>Do you have an Instagram account?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Linkedin</mat-label>
             <input matInput type="url" placeholder="Linkedin" formControlName="linkedin">
+            <mat-error></mat-error>
             <mat-hint>Do you have a Linkedin account?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Youtube</mat-label>
             <input matInput type="url" placeholder="Youtube" formControlName="youtube">
+            <mat-error></mat-error>
             <mat-hint>Do you have a Youtube account?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Blog</mat-label>
             <input matInput type="url" placeholder="Blog" formControlName="blog">
+            <mat-error></mat-error>
             <mat-hint>Do you have a blog?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
@@ -79,6 +91,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Notes</mat-label>
             <input matInput type="text" placeholder="Notes" formControlName="notes">
+            <mat-error></mat-error>
             <mat-hint>Any extra info?</mat-hint>
         </mat-form-field>
         <!--  <button (click)="submit()"

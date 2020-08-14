@@ -7,15 +7,19 @@
             <mat-label>First Name</mat-label>
             <input matInput type="text" placeholder="First Name" formControlName="first_name">
             <mat-error>First Name is required </mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Middle Name</mat-label>
             <input matInput type="text" placeholder="Middle Name" formControlName="middle_name">
+            <mat-error></mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
             <input matInput type="text" placeholder="Last Name" formControlName="last_name">
             <mat-error>Last Name is required </mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Primary Email</mat-label>
@@ -25,7 +29,8 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Primary Phone</mat-label>
-            <input matInput type="tel" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" placeholder="Primary Phone" formControlName="primary_phone">
+            <input matInput type="tel" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" placeholder="Primary Phone"
+                formControlName="primary_phone">
             <mat-error>Invalid phone</mat-error>
             <mat-hint></mat-hint>
         </mat-form-field>

@@ -131,19 +131,24 @@
             <mat-label>First Name</mat-label>
             <input matInput type="text" placeholder="First Name" formControlName="first_name">
             <mat-error>First Name is required</mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Middle Name</mat-label>
             <input matInput type="text" placeholder="Middle Name" formControlName="middle_name">
+            <mat-error></mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
             <input matInput type="text" placeholder="Last Name" formControlName="last_name">
             <mat-error>Last Name is required</mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Organization</mat-label>
             <input matInput type="text" placeholder="Organization" formControlName="organization">
+            <mat-error></mat-error>
             <mat-hint>NA / 3Metas</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
@@ -167,6 +172,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Payload</mat-label>
             <input matInput type="text" placeholder="Payload" formControlName="payload">
+            <mat-error></mat-error>
             <mat-hint>Extra information for the Address. ie: color:"blue", floor: "second"</mat-hint>
         </mat-form-field>
         <!--  <button (click)="submit()"
