@@ -7,6 +7,10 @@ import { AccountComponent } from './journey/account/account.component';
 import { ContactComponent } from './journey/contact/contact.component';
 import { LeadComponent } from './journey/lead/lead.component';
 import { GeoComponent } from './geo-location/geo/geo.component';
+import { AreaComponent } from './geo-location/area/area.component';
+import { LocationComponent } from './geo-location/location/location.component';
+import { LocationHoursComponent } from './geo-location/location-hours/location-hours.component';
+import { PremiseComponent } from './geo-location/premise/premise.component'
 
 
 const routes: Routes = [
@@ -42,7 +46,24 @@ const routes: Routes = [
   {
     path: 'geo',
     component: GeoComponent
+  },
+  {
+    path: 'area',
+    component: AreaComponent
+  },
+  {
+    path: 'loc',
+    component: LocationComponent
+  },
+  {
+    path: 'lh',
+    component: LocationHoursComponent
+  },
+  {
+    path: 'premise',
+    component: PremiseComponent
   }
+
 ];
 
 @NgModule({

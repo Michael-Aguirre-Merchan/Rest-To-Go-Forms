@@ -1,0 +1,85 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Parent Id</mat-label>
+                    <input matInput type="text" placeholder="Parent Id" formControlName="parent_id">
+                    <mat-error>Parent Id is required</mat-error>
+                    <mat-hint>Main Office</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Premise Type</mat-label>
+                    <input matInput type="text" placeholder="Premise Type" formControlName="premise_type">
+                    <mat-error>Premise Type is required</mat-error>
+                    <mat-hint>Apt, Office,  Warehouse</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Floor</mat-label>
+                    <input matInput type="number" placeholder="Floor" formControlName="floor">
+                    <mat-error></mat-error>
+                    <mat-hint>1, 2, etc</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Code</mat-label>
+                    <input matInput type="text" placeholder="Code" formControlName="code">
+                    <mat-error>Code is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" placeholder="Name" formControlName="name">
+                    <mat-error>Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <input matInput type="text" placeholder="Description" formControlName="description">
+                    <mat-error>Description is required</mat-error>
+                    <mat-hint>Apt, Office,  Warehouse</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Access Instructions</mat-label>
+                    <input matInput type="text" placeholder="Access Instructions" formControlName="access_instructions">
+                    <mat-error>Access Instructions is required</mat-error>
+                    <mat-hint>Apt, Office,  Warehouse</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Additional Instructions</mat-label>
+                    <input matInput type="text" placeholder="Additional Instructions" formControlName="additional_instructions">
+                    <mat-error></mat-error>
+                    <mat-hint>Apt, Office,  Warehouse</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source</mat-label>
+                    <input matInput type="text" placeholder="Source" formControlName="source">
+                    <mat-error>Source is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Alias</mat-label>
+                    <input matInput type="text" placeholder="Source Alias" formControlName="source_alias">
+                    <mat-error>Source Alias is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Id</mat-label>
+                    <input matInput type="text" placeholder="Source Id" formControlName="source_id">
+                    <mat-error>Source Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Type Notes</mat-label>
+                    <input matInput type="text" placeholder="Source Type Notes" formControlName="source_typenotes">
+                    <mat-error>Source Type Notes is required</mat-error>
+                    <mat-hint>Apt, Office,  Warehouse</mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                     <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                 </kt-portle>-->

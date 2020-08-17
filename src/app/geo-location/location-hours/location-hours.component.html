@@ -1,0 +1,55 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Day Name</mat-label>
+                    <input matInput type="text" placeholder="Day Name" formControlName="day_name">
+                    <mat-error>Day Name is required</mat-error>
+                    <mat-hint>Monday, Martes, etc</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Open At</mat-label>
+                    <input matInput type="time" placeholder="Open At" formControlName="open_at">
+                    <mat-error>Open At is required</mat-error>
+                    <mat-hint>7:00AM</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Close At</mat-label>
+                    <input matInput type="time" placeholder="Close At" formControlName="close_at">
+                    <mat-error>Close At is required</mat-error>
+                    <mat-hint>5:00PM</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Shift Id</mat-label>
+                    <input matInput type="text" placeholder="Shift Id" formControlName="shift_id">
+                    <mat-error>Shift Id is required</mat-error>
+                    <mat-hint>Casa de Rachel / Grandma's Home</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Shift Name</mat-label>
+                    <input matInput type="text" placeholder="Shift Name" formControlName="shift_name">
+                    <mat-error>Shift Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Shift Start Time</mat-label>
+                    <input matInput type="time" placeholder="Shift Start Time" formControlName="shift_start_time">
+                    <mat-error>Shift Start Time is required</mat-error>
+                    <mat-hint>9:00AM</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Shift End Time</mat-label>
+                    <input matInput type="time" placeholder="Shift End Time" formControlName="shift_end_time">
+                    <mat-error>Shift End Time is required</mat-error>
+                    <mat-hint>1:00PM</mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                     <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                 </kt-portle>-->

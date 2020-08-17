@@ -10,9 +10,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class GeoComponent implements OnInit {
   dataForm: FormGroup;
   
-lat;
-lng; 
-
   private geo: Geo;
 
   constructor(private fb: FormBuilder) { }
@@ -21,17 +18,6 @@ lng;
 
   ngOnInit( ): void {
     this.initForm();
-
-    this.getUserLocation();
-    }
-
-    getUserLocation() {
-       if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position => {
-            this.lat = position.coords.latitude;
-            this.lng = position.coords.longitude;
-          });
-    }
   }
 
   initForm() { 
@@ -57,7 +43,7 @@ lng;
       premise: [''],
       code: ['', Validators.required],
       name: ['', Validators.required],
-      first_name :['', Validators.required],
+      first_name: ['', Validators.required],
       middle_name: [''],
       last_name: ['', Validators.required],
       organization: [''],

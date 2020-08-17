@@ -10,11 +10,19 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { AreaComponent } from './area/area.component';
+import { LocationComponent } from './location/location.component';
+import { LocationHoursComponent } from './location-hours/location-hours.component';
+import { PremiseComponent } from './premise/premise.component';
 
 
 @NgModule({
   declarations: [
-    GeoComponent
+    GeoComponent,
+    AreaComponent,
+    LocationComponent,
+    LocationHoursComponent,
+    PremiseComponent
   ],
   imports: [
     CommonModule,
