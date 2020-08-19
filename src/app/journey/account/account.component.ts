@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Account } from '../models/account'
+import { Account } from '../models/account.model'
 
 @Component({
   selector: 'app-account',

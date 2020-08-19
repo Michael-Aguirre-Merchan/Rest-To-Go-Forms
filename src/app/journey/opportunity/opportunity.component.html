@@ -1,0 +1,101 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+<form [formGroup]="dataForm">
+    <div class="form-group">
+        <mat-form-field appearance="outline">
+            <mat-label>Code</mat-label>
+            <input matInput type="text" placeholder="Code" formControlName="code">
+            <mat-error>Code is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Name" formControlName="name">
+            <mat-error>Name is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Notes</mat-label>
+            <input matInput type="text" placeholder="Notes" formControlName="notes">
+            <mat-error>Notes is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Content Url</mat-label>
+            <input matInput type="url" placeholder="Content Url" formControlName="content_url">
+            <mat-error>Content Url is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Money</mat-label>
+            <input matInput type="number" placeholder="Money" formControlName="money">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Budget</mat-label>
+            <input matInput type="number" placeholder="Budget" formControlName="budget">
+            <mat-error>Budget</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Total</mat-label>
+            <input matInput type="number" placeholder="Total" formControlName="total">
+            <mat-error>Total is required</mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Duration</mat-label>
+            <input matInput type="number" placeholder="Duration" formControlName="duration">
+            <mat-error>Duration is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Duration Unit</mat-label>
+            <input matInput type="number" placeholder="Duration Unit" formControlName="duration_unit">
+            <mat-error>Duration Unit is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Duration Description</mat-label>
+            <input matInput type="text" placeholder="Duration Description" formControlName="duration_description">
+            <mat-error>Duration Description is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Payload</mat-label>
+            <input matInput type="text" placeholder="Payload" formControlName="payload">
+            <mat-error>Payload is required </mat-error>
+            <mat-hint>Extra information. ie: {Something, }</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Next Action At</mat-label>
+            <input matInput type="text" placeholder="Next Action At" formControlName="next_action_at">
+            <mat-error>Next Action At is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Owner Unique Id</mat-label>
+            <input matInput type="text" placeholder="Owner Unique Id" formControlName="owner_unique_id">
+            <mat-error>Owner Unique Id is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Owner Name</mat-label>
+            <input matInput type="text" placeholder="Owner Name" formControlName="owner_name">
+            <mat-error>Owner Name is required </mat-error>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Owner Email</mat-label>
+            <input matInput type="email" placeholder="Owner Email" formControlName="owner_email">
+            <mat-error>Owner Email is required </mat-error>
+            <mat-hint>example@email.com</mat-hint>
+        </mat-form-field>
+        <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+    </div>
+</form>
+<!-- </kt-portlet-body>
+            <kt-portlet-footer> (footer info) </kt-portlet-footer>
+        </kt-portle>-->

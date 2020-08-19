@@ -11,6 +11,10 @@ import { AreaComponent } from './geo-location/area/area.component';
 import { LocationComponent } from './geo-location/location/location.component';
 import { LocationHoursComponent } from './geo-location/location-hours/location-hours.component';
 import { PremiseComponent } from './geo-location/premise/premise.component'
+import { QuoteComponent } from './journey/quote/quote.component';
+import { OpportunityComponent } from './journey/opportunity/opportunity.component';
+import { FollowUpsComponent } from './journey/follow-ups/follow-ups.component';
+import { AccountDetailsComponent } from './journey/account-details/account-details.component';
 
 
 const routes: Routes = [
@@ -62,6 +66,22 @@ const routes: Routes = [
   {
     path: 'premise',
     component: PremiseComponent
+  },
+  {
+    path: 'quote',
+    component: QuoteComponent
+  },
+  {
+    path: 'opportunity',
+    component: OpportunityComponent
+  },
+  {
+    path: 'follow',
+    component: FollowUpsComponent
+  },
+  {
+    path: 'ad',
+    component: AccountDetailsComponent
   }
 
 ];

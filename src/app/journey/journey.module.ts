@@ -12,9 +12,13 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { QuoteComponent } from './quote/quote.component';
+import { OpportunityComponent } from './opportunity/opportunity.component';
+import { FollowUpsComponent } from './follow-ups/follow-ups.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 @NgModule({
-  declarations: [AccountComponent, ContactComponent, LeadComponent],
+  declarations: [AccountComponent, ContactComponent, LeadComponent, QuoteComponent, OpportunityComponent, FollowUpsComponent, AccountDetailsComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

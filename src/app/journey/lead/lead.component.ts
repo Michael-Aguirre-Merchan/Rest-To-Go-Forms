@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Lead } from '../models/lead'
+import { Lead } from '../models/lead.model'
 
 @Component({
   selector: 'app-lead',
