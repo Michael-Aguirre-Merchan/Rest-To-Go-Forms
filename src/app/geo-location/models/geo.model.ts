@@ -17,7 +17,7 @@ export interface Geo {
     admin6_code: string,
     admin6_name: string
     postal_code: string,
-    addres: string,
+    address: string,
     premise: string,
     code: string,
     name: string,

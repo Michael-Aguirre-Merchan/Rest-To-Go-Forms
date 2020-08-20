@@ -39,7 +39,7 @@ export class GeoComponent implements OnInit {
       admin6_code: [''],
       admin6_name: [''],
       postal_code: ['', Validators.required],
-      addres: ['', Validators.required],
+      address: ['', Validators.required],
       premise: [''],
       code: ['', Validators.required],
       name: ['', Validators.required],
