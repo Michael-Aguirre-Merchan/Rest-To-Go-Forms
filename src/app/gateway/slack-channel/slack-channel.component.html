@@ -1,0 +1,31 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>slack_hook</mat-label>
+                    <input matInput type="text" placeholder="Id" formControlName="slack_hook">
+                    <mat-error>Id is required</mat-error>
+                    <mat-hint>Customer Slack Hook. For Notifications</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>slack_channel</mat-label>
+                    <input matInput type="text" placeholder="User Unique Id" formControlName="slack_channel">
+                    <mat-error>User Unique Id is required</mat-error>
+                    <mat-hint>Customer Slack Channel. For Notifications</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>slack_username</mat-label>
+                    <input matInput type="text" placeholder="Code" formControlName="slack_username">
+                    <mat-error>Code is required</mat-error>
+                    <mat-hint>Customer Slack UserName. As display on the slack Notification. ie: Jarvis@23blocks</mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                     <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                 </kt-portle>-->

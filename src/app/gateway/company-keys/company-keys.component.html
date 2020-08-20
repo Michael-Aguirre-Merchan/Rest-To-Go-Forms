@@ -1,0 +1,43 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <input matInput type="text" placeholder="Description" formControlName="description">
+                    <mat-error>Description is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Provider</mat-label>
+                    <input matInput type="text" placeholder="Provider" formControlName="provider">
+                    <mat-error>Provider is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Encrypted Api Key</mat-label>
+                    <input matInput type="text" placeholder="Encrypted Api Key" formControlName="encripted_api_key">
+                    <mat-error>Encrypted Api Key is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Encrypted Api Secret</mat-label>
+                    <input matInput type="text" placeholder="Encrypted Api Secret" formControlName="encrypted_api_secret">
+                    <mat-error>Encrypted Api Secret is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Api Region</mat-label>
+                    <input matInput type="text" placeholder="Api Region" formControlName="api_region">
+                    <mat-error>Api Region is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                     <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                 </kt-portle>-->
