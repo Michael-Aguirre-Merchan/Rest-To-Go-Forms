@@ -25,8 +25,8 @@ export interface Geo {
     middle_name: string,
     last_name: string,
     organization: string,
-    latitude: string, 
-    longitude: string,
+    latitude: number, 
+    longitude: number,
     qcode: string,
     payload: string,
     

@@ -28,8 +28,10 @@
             <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <mat-label>Description</mat-label>
+            <mat-label>Description (optional)</mat-label>
             <input matInput type="text" placeholder="Description" formControlName="description">
+            <mat-error></mat-error>
+            <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Image Url</mat-label>
@@ -38,9 +40,9 @@
             <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <mat-label>Content Url</mat-label>
+            <mat-label>Content Url (optional)</mat-label>
             <input matInput type="url" placeholder="Content Url" formControlName="contentUrl">
-            <mat-error>Content Url is required</mat-error>
+            <mat-error></mat-error>
             <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">

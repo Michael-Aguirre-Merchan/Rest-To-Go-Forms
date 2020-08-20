@@ -10,8 +10,9 @@
             <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <mat-label>Cart Notes</mat-label>
+            <mat-label>Cart Notes (optional)</mat-label>
             <input matInput type="text" placeholder="Cart Notes" formControlName="cartNotes">
+            <mat-error></mat-error>
             <mat-hint>Any extra Info?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
@@ -21,13 +22,14 @@
             <mat-hint></mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <mat-label>Product Notes</mat-label>
+            <mat-label>Product Notes (optional)</mat-label>
             <input matInput type="text" placeholder="Product Notes" formControlName="productNotes">
+            <mat-error></mat-error>
             <mat-hint>Any extra Info?</mat-hint>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Quantity</mat-label>
-            <input matInput type="text" placeholder="Quantity" formControlName="quantity">
+            <input matInput type="number" placeholder="Quantity" formControlName="quantity">
             <mat-error>Quantity is required</mat-error>
             <mat-hint>How many?</mat-hint>
         </mat-form-field>

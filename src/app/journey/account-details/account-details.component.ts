@@ -33,7 +33,7 @@ export class AccountDetailsComponent implements OnInit {
       blog: [''],
       network_a: ['', Validators.required],
       network_b: ['', Validators.required],  
-      notes: ['', Validators.required],  
+      notes: [''],  
 
     });
   }

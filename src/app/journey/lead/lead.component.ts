@@ -34,8 +34,8 @@ export class LeadComponent implements OnInit {
       linkedin: [''],
       youtube: [''],
       blog: [''],
-      network_a: [''],
-      network_b: [''],
+      network_a: ['', Validators.required],
+      network_b: ['', Validators.required],
       notes: [''],
     });
   }

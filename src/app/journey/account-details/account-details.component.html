@@ -5,7 +5,7 @@
             <div class="form-group">
                 <mat-form-field appearance="outline">
                     <mat-label>Phone Number</mat-label>
-                    <input matInput type="number" placeholder="Phone Number" formControlName="phone_number">
+                    <input matInput type="number" placeholder="Phone Number" pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" formControlName="phone_number">
                     <mat-error>Phone Number is required</mat-error>
                     <mat-hint></mat-hint>
                 </mat-form-field>
@@ -13,48 +13,49 @@
                     <mat-label>Primary Email</mat-label>
                     <input matInput type="email" placeholder="Primary Email" formControlName="primary_email">
                     <mat-error>Primary Email is required </mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-hint>example@email.com</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>Web Site</mat-label>
+                    <mat-label>Web Site (optional)</mat-label>
                     <input matInput type="url" placeholder="Web Site" formControlName="web_site">
-                    <mat-error>Web Site is required </mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-error></mat-error>
+                    <mat-hint>Do you have a web site?</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>Twitter</mat-label>
+                    <mat-label>Twitter (optional)</mat-label>
                     <input matInput type="url" placeholder="Twitter" formControlName="twitter">
-                    <mat-error>Twitter is required </mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-error></mat-error>
+                    <mat-hint>Do you have a Twitter account?</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>Facebook</mat-label>
+                    <mat-label>Facebook (optional)</mat-label>
                     <input matInput type="url" placeholder="Facebook" formControlName="fb">
-                    <mat-error>Facebook is required</mat-error>
+                    <mat-error></mat-error>
+                    <mat-hint>Do you have a Facebook account?</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>Instagram</mat-label>
+                    <mat-label>Instagram (optional)</mat-label>
                     <input matInput type="url" placeholder="Instagram" formControlName="instagram">
-                    <mat-error>Instagram is required</mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-error></mat-error>
+                    <mat-hint>Do you have an Instagram account?</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>Linkedin</mat-label>
+                    <mat-label>Linkedin (optional)</mat-label>
                     <input matInput type="number" placeholder="Linkedin" formControlName="linkedin">
-                    <mat-error>Linkedin is required</mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-error></mat-error>
+                    <mat-hint>Do you have a Linkedin account?</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>YouTube</mat-label>
+                    <mat-label>YouTube (optional)</mat-label>
                     <input matInput type="url" placeholder="YouTube" formControlName="youtube">
-                    <mat-error>YouTube is required</mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-error></mat-error>
+                    <mat-hint>Do you have a Youtube account?</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>Blog</mat-label>
+                    <mat-label>Blog (optional)</mat-label>
                     <input matInput type="url" placeholder="Blog" formControlName="blog">
-                    <mat-error>Blog is required</mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-error></mat-error>
+                    <mat-hint>Do you have a blog?</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Network A</mat-label>
@@ -71,8 +72,8 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Notes</mat-label>
                     <input matInput type="text" placeholder="Notes" formControlName="notes">
-                    <mat-error>Notes is required</mat-error>
-                    <mat-hint></mat-hint>
+                    <mat-error></mat-error>
+                    <mat-hint>Any extra info?</mat-hint>
                 </mat-form-field>
                 <!--  <button (click)="submit()"
                                     [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>

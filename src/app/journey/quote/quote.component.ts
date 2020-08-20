@@ -25,7 +25,6 @@ export class QuoteComponent implements OnInit {
       name: ['', Validators.required],
       notes: ['', Validators.required],
       content_url: ['', Validators.required],
-      money: ['', Validators.required],
       budget: ['', Validators.required],
       total: ['', Validators.required],
       duration: ['', Validators.required],
