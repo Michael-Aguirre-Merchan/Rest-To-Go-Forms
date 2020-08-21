@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { slackChannel } from '../models/slack-channel.model';
+import { SlackChannel } from '../models/slack-channel.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SlackChannelComponent implements OnInit {
 
-  private SlackChannel: slackChannel;
+  private slackChannel: SlackChannel;
 
   dataForm: FormGroup;
 
@@ -29,8 +29,8 @@ export class SlackChannelComponent implements OnInit {
   }
   submit() {
     if (this.dataForm.valid) {
-      this.SlackChannel = this.dataForm.value;
-      console.log(this.SlackChannel)
+      this.slackChannel = this.dataForm.value;
+      console.log(this.slackChannel)
     }
   }
   ngOnDestroy(): void {

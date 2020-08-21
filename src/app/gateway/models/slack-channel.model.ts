@@ -1,4 +1,4 @@
-export interface  slackChannel {
+export interface  SlackChannel {
 
     slack_hook: string,
     slack_channel: string,

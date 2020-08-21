@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { slackChannel } from '../../models/slack-channel.model';
+import { SlackChannel } from '../../models/slack-channel.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class PostformService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: slackChannel) {
+  getRes(myform: SlackChannel) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({
