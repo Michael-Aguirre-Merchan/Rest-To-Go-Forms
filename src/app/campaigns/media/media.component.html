@@ -1,0 +1,55 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Text Name</mat-label>
+                    <input matInput type="text" placeholder="Text Name" formControlName="textname">
+                    <mat-error>Text Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>textcode</mat-label>
+                    <input matInput type="number" placeholder="Duration" formControlName="textcode">
+                    <mat-error>Duration is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Text Description</mat-label>
+                    <input matInput type="text" placeholder="Text Description" formControlName="textdescription">
+                    <mat-error>Text Description is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Text Medium Type</mat-label>
+                    <input matInput type="number" placeholder="Text Medium Type" formControlName="textmedium_type">
+                    <mat-error>Text Medium Type is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Text Medium Link</mat-label>
+                    <input matInput type="number" placeholder="Text Medium Link" formControlName="textmedium_link">
+                    <mat-error>Text Medium Link is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Text Status</mat-label>
+                    <input matInput type="text" placeholder="Text Status" formControlName="textstatus">
+                    <mat-error>Text Status is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Text Enabled</mat-label>
+                    <input matInput type="number" placeholder="Text Enabled" formControlName="textenabled">
+                    <mat-error>Text Enabled is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                                    [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                            -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                         <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                     </kt-portle>-->
