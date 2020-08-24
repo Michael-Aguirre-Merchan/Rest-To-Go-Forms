@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SlackChannel } from '../models/slack-channel.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './slack-channel.component.html',
   styleUrls: ['./slack-channel.component.scss']
 })
-export class SlackChannelComponent implements OnInit {
+export class SlackChannelComponent implements OnInit, OnDestroy {
 
   private slackChannel: SlackChannel;
 

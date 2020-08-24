@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FollowUps } from '../models/follow-ups.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './follow-ups.component.html',
   styleUrls: ['./follow-ups.component.scss']
 })
-export class FollowUpsComponent implements OnInit {
+export class FollowUpsComponent implements OnInit, OnDestroy {
 
   private followUps: FollowUps;
 

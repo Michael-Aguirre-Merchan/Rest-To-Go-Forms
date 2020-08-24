@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Lead } from '../models/lead.model'
 
@@ -7,7 +7,7 @@ import { Lead } from '../models/lead.model'
   templateUrl: './lead.component.html',
   styleUrls: ['./lead.component.scss']
 })
-export class LeadComponent implements OnInit {
+export class LeadComponent implements OnInit, OnDestroy {
 
   private lead: Lead;
 

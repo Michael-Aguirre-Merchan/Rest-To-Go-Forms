@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FbKeys } from '../models/fb-keys.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './fb-keys.component.html',
   styleUrls: ['./fb-keys.component.scss']
 })
-export class FbKeysComponent implements OnInit {
+export class FbKeysComponent implements OnInit, OnDestroy {
 
   private fbKeys: FbKeys;
 

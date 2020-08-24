@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Opportunity } from '../models/opportunity.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './opportunity.component.html',
   styleUrls: ['./opportunity.component.scss']
 })
-export class OpportunityComponent implements OnInit {
+export class OpportunityComponent implements OnInit, OnDestroy {
 
   private opportunity: Opportunity;
 

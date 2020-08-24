@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { exchangeSettings } from '../models/exchange-settings.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './exchange-settings.component.html',
   styleUrls: ['./exchange-settings.component.scss']
 })
-export class ExchangeSettingsComponent implements OnInit {
+export class ExchangeSettingsComponent implements OnInit, OnDestroy {
 
   private ExchangeSettings: exchangeSettings;
 

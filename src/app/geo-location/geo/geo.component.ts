@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Geo } from '../models/geo.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './geo.component.html',
   styleUrls: ['./geo.component.scss']
 })
-export class GeoComponent implements OnInit {
+export class GeoComponent implements OnInit, OnDestroy {
   dataForm: FormGroup;
   
   private geo: Geo;

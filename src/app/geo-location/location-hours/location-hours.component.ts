@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LocationHours } from '../models/location-hours.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './location-hours.component.html',
   styleUrls: ['./location-hours.component.scss']
 })
-export class LocationHoursComponent implements OnInit {
+export class LocationHoursComponent implements OnInit, OnDestroy {
   dataForm: FormGroup;
   
   private locationHours: LocationHours;

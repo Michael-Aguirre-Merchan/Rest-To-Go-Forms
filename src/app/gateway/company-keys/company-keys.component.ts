@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { companyKeys } from '../models/company-keys.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './company-keys.component.html',
   styleUrls: ['./company-keys.component.scss']
 })
-export class CompanyKeysComponent implements OnInit {
+export class CompanyKeysComponent implements OnInit, OnDestroy {
 
   private CompanyKeys: companyKeys;
 

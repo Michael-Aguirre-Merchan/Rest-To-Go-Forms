@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Premise } from '../models/premise.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './premise.component.html',
   styleUrls: ['./premise.component.scss']
 })
-export class PremiseComponent implements OnInit {
+export class PremiseComponent implements OnInit, OnDestroy {
 
   dataForm: FormGroup;
   
