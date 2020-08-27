@@ -1,0 +1,55 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Unique Id</mat-label>
+                    <input matInput type="text" placeholder="Unique Id" formControlName="unique_id">
+                    <mat-error>Unique Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Customer Unique Id</mat-label>
+                    <input matInput type="text" placeholder="Customer Unique Id" formControlName="customer_unique_id">
+                    <mat-error>Customer Unique Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Customer Id</mat-label>
+                    <input matInput type="text" placeholder="Customer Id" formControlName="customer_id">
+                    <mat-error>Customer Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Spent</mat-label>
+                    <input matInput type="number" placeholder="Spent" formControlName="spent">
+                    <mat-error>Spent is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Points</mat-label>
+                    <input matInput type="number" placeholder="Points" formControlName="points">
+                    <mat-error>Points is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Expire Rule</mat-label>
+                    <input matInput type="text" placeholder="Expire Rule" formControlName="expire_rule">
+                    <mat-error>Expire Rule is required</mat-error>
+                    <mat-hint>Campaing, Tier, UserProfile</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Expiry At</mat-label>
+                    <input matInput type="date" placeholder="Expiry At" formControlName="expiry_at">
+                    <mat-error>Expiry At is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                     <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                 </kt-portle>-->

@@ -1,0 +1,109 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Unique Id</mat-label>
+                    <input matInput type="text" placeholder="Unique Id" formControlName="unique_id">
+                    <mat-error>Unique Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Code</mat-label>
+                    <input matInput type="text" placeholder="Code" formControlName="code">
+                    <mat-error>Code is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" placeholder="Name" formControlName="name">
+                    <mat-error>Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <input matInput type="text" placeholder="Description" formControlName="description">
+                    <mat-error>Description is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Coupon Code</mat-label>
+                    <input matInput type="text" placeholder="Description" formControlName="coupon_code">
+                    <mat-error>Coupon Code is required</mat-error>
+                    <mat-hint>Coupon Code to validate, ie: summer2020</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Country Id</mat-label>
+                    <input matInput type="url" placeholder="Country Id" formControlName="country_id">
+                    <mat-error>Country Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Country Name</mat-label>
+                    <input matInput type="text" placeholder="Country Name" formControlName="country_name">
+                    <mat-error>Country Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Currency Unique Id</mat-label>
+                    <input matInput type="text" placeholder="Currency Unique Id" formControlName="currency_unique_id">
+                    <mat-error>Currency Unique Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Currency Code</mat-label>
+                    <input matInput type="text" placeholder="Currency Code" formControlName="currency_code">
+                    <mat-error>Currency Code is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Currency Name</mat-label>
+                    <input matInput type="text" placeholder="Currency Name" formControlName="currency_name">
+                    <mat-error>Currency Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Money Threshold</mat-label>
+                    <input matInput type="number" placeholder="Money Threshold" formControlName="money_threshold">
+                    <mat-error>Money Threshold is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Points Threshold</mat-label>
+                    <input matInput type="number" placeholder="Points Threshold" formControlName="points_threshold">
+                    <mat-error>Points Threshold is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source</mat-label>
+                    <input matInput type="text" placeholder="Source" formControlName="source">
+                    <mat-error>Source is required </mat-error>
+                    <mat-hint>Where is this Tier coming from</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Alias</mat-label>
+                    <input matInput type="text" placeholder="Source Alias" formControlName="source_alias">
+                    <mat-error>Source Alias is required </mat-error>
+                    <mat-hint>Human accesible name for the Tier Source, ie: shoppingCart App</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Id</mat-label>
+                    <input matInput type="text" placeholder="Source Id" formControlName="source_id">
+                    <mat-error>Source Id is required </mat-error>
+                    <mat-hint>Unique Id of the source. ie: cart_id / user_unique_id, etc</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Type</mat-label>
+                    <input matInput type="text" placeholder="Source Type" formControlName="source_type">
+                    <mat-error>Source Type is required </mat-error>
+                    <mat-hint>Block Products / External, etc</mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                     <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                 </kt-portle>-->

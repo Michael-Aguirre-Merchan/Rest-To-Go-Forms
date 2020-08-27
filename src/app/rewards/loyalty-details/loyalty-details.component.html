@@ -1,0 +1,91 @@
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Loyalty Tier</mat-label>
+                    <input matInput type="text" placeholder="Loyalty Tier" formControlName="loyalty_tier">
+                    <mat-error>Loyalty Tier is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Unique Id</mat-label>
+                    <input matInput type="text" placeholder="Unique Id" formControlName="unique_id">
+                    <mat-error>Unique Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" placeholder="Name" formControlName="name">
+                    <mat-error>Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Country Id</mat-label>
+                    <input matInput type="text" placeholder="Country Id" formControlName="country_id">
+                    <mat-error>Country Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Country Name</mat-label>
+                    <input matInput type="text" placeholder="Country Name" formControlName="country_name">
+                    <mat-error>Country Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Currency Unique Id</mat-label>
+                    <input matInput type="text" placeholder="Currency Unique Id" formControlName="currency_unique_id">
+                    <mat-error>Currency Unique Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Currency Code</mat-label>
+                    <input matInput type="text" placeholder="Currency Code" formControlName="currency_code">
+                    <mat-error>Currency Code is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Currency Name</mat-label>
+                    <input matInput type="text" placeholder="Currency Name" formControlName="currency_name">
+                    <mat-error>Currency Name is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Minimum Spend</mat-label>
+                    <input matInput type="number" placeholder="Minimum Spend" formControlName="minimum_spend">
+                    <mat-error>Minimum Spend is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Maximum Spend</mat-label>
+                    <input matInput type="number" placeholder="Maximum Spend" formControlName="maximum_spend">
+                    <mat-error>Maximum Spend is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Minimum Points</mat-label>
+                    <input matInput type="number" placeholder="Minimum Points" formControlName="minimum_points">
+                    <mat-error>Minimum Points is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Maximum Points</mat-label>
+                    <input matInput type="number" placeholder="Maximum Points" formControlName="maximum_points">
+                    <mat-error>Maximum Points is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Default Tier</mat-label>
+                    <input matInput type="text" placeholder="Default Tier" formControlName="default_tier">
+                    <mat-error>Default Tier is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                            [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                    -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                     <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                 </kt-portle>-->
