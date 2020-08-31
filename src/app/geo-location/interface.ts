@@ -9,7 +9,7 @@ export interface AreaData {
 
 }
 
-export interface Geo {
+export interface GeoData {
 
     owner_unique_id: string, 
     owner_type: string,
@@ -33,7 +33,7 @@ export interface Geo {
     code: string,
     name: string,
     first_name :string,
-    middle_name: string,
+    middle_name?: string,
     last_name: string,
     organization?: string,
     latitude: number, 
