@@ -20,7 +20,7 @@ export class AppService {
   addToCart(
     addToCartData: addToCartData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/addToCart/',
+    return this.http.post(environment.API_23GATEWAY_URL + '/addtocart/',
       { addToCart: addToCartData, });
   }
   addCategories(
