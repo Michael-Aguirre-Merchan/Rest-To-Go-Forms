@@ -1,7 +1,7 @@
 export interface AccountData {
 
     code:string, 
-    name:string  
+    name:string, 
 
 }
 
