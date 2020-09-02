@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {Products} from '../models/add-products.model';
+import {Products} from '../models/product.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

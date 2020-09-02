@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Contact } from '../models/contact.model'
+import { JourneyService } from '../journey.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,7 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private journeyService: JourneyService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -32,6 +33,13 @@ export class ContactComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.contact = this.dataForm.value;
+      this.journeyService.addAccountDetails ({
+        first_name: this.contact.firstName,
+        middle_name: this.contact.middleName, 
+        last_name: this.contact.lastName,
+        primary_email: this.contact.primaryEmail,
+        primary_phone: this.contact.primaryPhone,
+      })
       console.log(this.contact)
     }
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Quote } from '../models/quote.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { JourneyService } from '../journey.service';
 
 @Component({
   selector: 'app-quote',
@@ -15,7 +16,7 @@ export class QuoteComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private journeyService: JourneyService) { }
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
@@ -37,6 +38,19 @@ export class QuoteComponent implements OnInit, OnDestroy {
     submit()  {
       if (this.dataForm.valid) {
         this.quote = this.dataForm.value;
+        this.journeyService.addAccountDetails ({
+          code: this.quote.code,
+          name: this.quote.name,
+          notes: this.quote.notes,
+          content_url: this.quote.contentUrl,
+          budget: this.quote.budget,
+          total: this.quote.total,
+          duration: this.quote.duration,
+          duration_unit: this.quote.durationUnit,
+          duration_description: this.quote.durationDescription,
+          payload: this.quote.payload,
+          next_action_at: this.quote.nextActionAt,
+        })
         console.log(this.quote)
       }
     }

@@ -1,20 +1,20 @@
-export interface FbKeys {
+export class FbKey {
 
-unique_id: string,
-company_unique_id: string,
-name: string,
-account_name: string,
-app_name: string,
-user_name: string,
-source: string,
-source_id: string,
-source_type: string,
-source_alias: string,
-status: string,
-enabled: string,
-encrypted_app_id: string,
-encrypted_account_id: string,
-encrypted_access_token: string,
-encrypted_app_secret: string,
+uniqueId: string;
+companyUniqueId: string;
+name: string;
+accountName: string;
+appName: string;
+userName: string;
+source: string;
+sourceId: string;
+sourceType: string;
+sourceAlias: string;
+status: string;
+enabled: string;
+encryptedAppId: string;
+encryptedAccountId: string;
+encryptedAccessToken: string;
+encryptedAppSecret: string;
 
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { FollowUps } from '../../models/follow-ups.model';
+import { FollowUp } from '../../models/follow.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class FollowUpsService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: FollowUps) {
+  getRes(myform: FollowUp) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({

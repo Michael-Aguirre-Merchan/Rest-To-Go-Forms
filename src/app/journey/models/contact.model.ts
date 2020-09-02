@@ -1,9 +1,9 @@
-export interface Contact {
+export class Contact {
 
-    first_name:string,
-    middle_name:string,
-    last_name:string,
-    primary_email:string,
-    primary_phone:number
+    firstName:string;
+    middleName:string;
+    lastName:string;
+    primaryEmail:string;
+    primaryPhone:number
 
 }

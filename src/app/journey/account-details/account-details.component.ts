@@ -1,21 +1,22 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AccountDetails } from '../models/account-details';
+import { AccountDetail } from '../models/accountdetail.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { JourneyService } from '../journey.service';
 
 @Component({
   selector: 'app-account-details',
   templateUrl: './account-details.component.html',
   styleUrls: ['./account-details.component.scss']
 })
-export class AccountDetailsComponent implements OnInit, OnDestroy {
+export class accountDetailsComponent implements OnInit, OnDestroy {
 
-  private accountDetails: AccountDetails;
+  private accountDetail: AccountDetail;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private journeyService: JourneyService) { }
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
@@ -39,8 +40,22 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
   }
     submit()  {
       if (this.dataForm.valid) {
-        this.accountDetails = this.dataForm.value;
-        console.log(this.accountDetails)
+        
+        this.accountDetail = this.dataForm.value;
+        this.journeyService.addAccountDetails ({ 
+          phone_number: this.accountDetail.phoneNumber, 
+          primary_email: this.accountDetail.primaryEmail,
+          web_site: this.accountDetail.webSite,
+          twitter: this.accountDetail.twitter,
+          fb: this.accountDetail.fb,
+          instagram: this.accountDetail.instagram,
+          linkedin: this.accountDetail.linkedin,
+          youtube: this.accountDetail.youtube,
+          blog: this.accountDetail.blog,
+          network_a: this.accountDetail.networkA,
+          network_b: this.accountDetail.networkB,  
+          notes: this.accountDetail.notes,  });
+          console.log(this.accountDetail)
       }
     }
     ngOnDestroy(): void {

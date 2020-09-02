@@ -1,6 +1,6 @@
-export interface Account {
+export class Account {
 
-    code:string, 
+    code:string; 
     name:string  
      
 }

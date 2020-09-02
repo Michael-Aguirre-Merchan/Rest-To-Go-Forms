@@ -1,17 +1,17 @@
-export interface Lead {
-    first_name: string,
-    middle_name: string,
-    last_name: string,
-    phone_number: string,
-    lead_email: string, 
-    web_site: string,
-    twitter: string, 
-    fb: string,
-    instagram: string,
-    linkedin: string,
-    youtube: string,
-    blog: string,
-    network_a: string,
-    network_b: string,
+export class Lead {
+    firstName: string;
+    middleName: string;
+    lastName: string;
+    phoneNumber: string;
+    leadEmail: string; 
+    webSite: string;
+    twitter: string; 
+    fb: string;
+    instagram: string;
+    linkedin: string;
+    youtube: string;
+    blog: string;
+    networkA: string;
+    networkB: string;
     notes: string
 }

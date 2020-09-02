@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FollowUps } from '../models/follow-ups.model';
+import { FollowUp } from '../models/follow.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { JourneyService } from '../journey.service';
 
 @Component({
   selector: 'app-follow-ups',
@@ -9,13 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FollowUpsComponent implements OnInit, OnDestroy {
 
-  private followUps: FollowUps;
+  private followUp: FollowUp;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private journeyService: JourneyService) { }
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
@@ -38,8 +39,23 @@ export class FollowUpsComponent implements OnInit, OnDestroy {
   }
     submit()  {
       if (this.dataForm.valid) {
-        this.followUps = this.dataForm.value;
-        console.log(this.followUps)
+        this.followUp = this.dataForm.value;
+        this.journeyService.addAccountDetails ({
+          code: this.followUp.code,
+          notes: this.followUp.notes,
+          next_action_at: this.followUp.nextActionAt,
+          reminder: this.followUp.reminder,
+          total: this.followUp.total,
+          owner_unique_id: this.followUp.ownerUniqueId,
+          owner_name: this.followUp.ownerName,
+          owner_email: this.followUp.ownerEmail,
+          duration: this.followUp.duration,
+          duration_unit: this.followUp.durationUnit,
+          duration_description: this.followUp.durationDescription,  
+          status: this.followUp.status,  
+          enabled: this.followUp.enabled
+        })
+        console.log(this.followUp)
       }
     }
     ngOnDestroy(): void {

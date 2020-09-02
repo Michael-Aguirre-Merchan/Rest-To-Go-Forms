@@ -1,15 +1,15 @@
-export interface Quote {
+export class Quote {
 
-    code: string,
-    name: string,
-    notes: string,
-    content_url: string,
-    budget: number,
-    total: number,
-    duration: number,
-    duration_unit: number,
-    duration_description: string,
-    payload: string,
-    next_action_at: string,
+    code: string;
+    name: string;
+    notes: string;
+    contentUrl: string;
+    budget: number;
+    total: number;
+    duration: number;
+    durationUnit: number;
+    durationDescription: string;
+    payload: string;
+    nextActionAt: string;
 
 }

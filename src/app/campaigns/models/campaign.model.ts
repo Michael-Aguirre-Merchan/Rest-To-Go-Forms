@@ -1,8 +1,8 @@
-export interface Campaign {
+export class Campaign {
 
-    name: string,     
-    duration: number,  
-    duration_unit: string,     
-    budget: number,
+    name: string;  
+    duration: number;  
+    durationUnit: string;     
+    budget: number;
 
 }

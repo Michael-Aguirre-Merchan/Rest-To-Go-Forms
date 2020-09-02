@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AccountDetails } from '../../models/account-details';
+import { AccountDetail } from '../../models/accountdetail.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class AccountDetailsService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: AccountDetails) {
+  getRes(myform: AccountDetail) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Account } from '../models/account.model'
+import { JourneyService } from '../journey.service';
 
 @Component({
   selector: 'app-account',
@@ -15,7 +16,7 @@ export class AccountComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private journeyService: JourneyService) { }
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
@@ -28,6 +29,12 @@ export class AccountComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.account = this.dataForm.value;
+      this.journeyService.addAccount ({ code: this.account.code, name: this.account.name });
+      this.account = this.dataForm.value;
+        this.journeyService.addAccountDetails ({
+          code: this.account.code,
+          name: this.account.name
+        })
       console.log(this.account)
     }
   }
