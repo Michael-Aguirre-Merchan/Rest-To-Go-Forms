@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Campaign } from '../models/campaign.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CampaignsService } from '../campaigns.service';
 
 @Component({
   selector: 'app-campaign',
@@ -15,7 +16,7 @@ export class CampaignComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private campaignService: CampaignsService) { }
   
   ngOnInit(): void { this.initForm(); }
 
@@ -31,6 +32,12 @@ export class CampaignComponent implements OnInit, OnDestroy {
   submit()  {
     if (this.dataForm.valid) {
       this.campaign = this.dataForm.value;
+      this.campaignService.addCampaign ({
+        name: this.campaign.name,
+        duration: this.campaign.duration,
+        duration_unit: this.campaign.durationUnit,
+        budget: this.campaign.budget
+      });
       console.log(this.campaign)
     }
   }

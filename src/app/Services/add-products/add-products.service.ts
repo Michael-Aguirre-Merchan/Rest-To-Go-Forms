@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Products } from '../../models/product.model';
+import { Product } from '../../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class PostformService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: Products) {
+  getRes(myform: Product) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({

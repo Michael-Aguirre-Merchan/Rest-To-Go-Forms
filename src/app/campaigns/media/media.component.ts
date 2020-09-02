@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Media } from '../models/media.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CampaignsService } from '../campaigns.service';
 
 @Component({
   selector: 'app-media',
@@ -15,7 +16,7 @@ export class MediaComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private campaignService: CampaignsService) { }
   
   ngOnInit(): void { this.initForm(); }
 
@@ -34,6 +35,15 @@ export class MediaComponent implements OnInit, OnDestroy {
   submit()  {
     if (this.dataForm.valid) {
       this.media = this.dataForm.value;
+      this.campaignService.addMedia ({
+        textname: this.media.textname,
+        textcode: this.media.textcode,
+        textdescription: this.media.textdescription,
+        textmedium_type: this.media.textmediumType,
+        textmedium_link: this.media.textmediumLink,
+        textstatus: this.media.textstatus,
+        textenabled: this.media.textenabled
+      });
       console.log(this.media)
     }
   }

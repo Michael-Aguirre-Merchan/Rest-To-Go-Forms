@@ -1,4 +1,4 @@
-export interface ProductsData {
+export interface ProductData {
 
     id: number;
     uniqueId: string;

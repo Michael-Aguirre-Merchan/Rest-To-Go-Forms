@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { exchangeSettings } from '../models/exchange-settings.model';
+import { exchangeSettings } from '../models/exchangesettings.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GatewayService } from '../gateway.service';
 
 @Component({
   selector: 'app-exchange-settings',
@@ -15,7 +16,7 @@ export class ExchangeSettingsComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private gatewayService: GatewayService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -31,6 +32,12 @@ export class ExchangeSettingsComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.ExchangeSettings = this.dataForm.value;
+      this.gatewayService.addexchangeSettings ({ 
+        vhost: this.ExchangeSettings.vhost, 
+        host: this.ExchangeSettings.host,
+        user_name: this.ExchangeSettings.userName,
+        encrypted_password: this.ExchangeSettings.encryptedPassword,
+      });
       console.log(this.ExchangeSettings)
     }
   }

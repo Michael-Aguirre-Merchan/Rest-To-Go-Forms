@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { ProductsData, addToCartData, CategoriesData } from './interface';
+import { ProductData, addToCartData, CategoriesData } from './interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +11,11 @@ export class AppService {
 
   constructor() { }
 
-  addProducts(
-    productsData: ProductsData
+  addProduct(
+    productData: ProductData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/products/',
-      { products: productsData, });
+    return this.http.post(environment.API_23GATEWAY_URL + '/product/',
+      { product: productData, });
   }
   addToCart(
     addToCartData: addToCartData

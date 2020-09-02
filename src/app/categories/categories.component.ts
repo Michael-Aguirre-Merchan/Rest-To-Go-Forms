@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Categories } from '../models/categories.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AppService } from '../app.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private appService: AppService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -40,6 +41,20 @@ export class CategoriesComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.category = this.dataForm.value;
+      this.appService.addCategories ({ 
+        id: this.category.id, 
+        uniqueId: this.category.uniqueId,
+        code: this.category.code,
+        name: this.category.name,
+        description: this.category.description,
+        imageUrl: this.category.imageUrl,
+        parentId: this.category.id,
+        displayOrder: this.category.id,
+        contentUrl: this.category.contentUrl,
+        status: this.category.status,
+        enabled: this.category.enabled,
+        payload: this.category.payload,
+      });
       console.log(this.category)
     }
   }

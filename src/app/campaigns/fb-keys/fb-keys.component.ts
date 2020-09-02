@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FbKeys } from '../models/fb-keys.model';
+import { FbKey } from '../models/fbkey.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CampaignsService } from '../campaigns.service';
 
 @Component({
   selector: 'app-fb-keys',
@@ -9,13 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FbKeysComponent implements OnInit, OnDestroy {
 
-  private fbKeys: FbKeys;
+  private fbKey: FbKey;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private campaignService: CampaignsService) { }
   
   ngOnInit(): void { this.initForm(); }
 
@@ -42,8 +43,26 @@ export class FbKeysComponent implements OnInit, OnDestroy {
   }
   submit()  {
     if (this.dataForm.valid) {
-      this.fbKeys = this.dataForm.value;
-      console.log(this.fbKeys)
+      this.fbKey = this.dataForm.value;
+      this.campaignService.addFbKeys ({
+        unique_id: this.fbKey.uniqueId,
+        company_unique_id: this.fbKey.companyUniqueId,
+        name: this.fbKey.name,
+        account_name: this.fbKey.accountName,
+        app_name: this.fbKey.appName,
+        user_name: this.fbKey.userName,
+        source: this.fbKey.source,
+        source_id: this.fbKey.sourceId,
+        source_type: this.fbKey.sourceType,
+        source_alias: this.fbKey.sourceAlias,
+        status: this.fbKey.status,
+        enabled: this.fbKey.enabled,
+        encrypted_app_id: this.fbKey.encryptedAppId,
+        encrypted_account_id: this.fbKey.encryptedAccountId,
+        encrypted_access_token: this.fbKey.encryptedAccessToken,
+        encrypted_app_secret: this.fbKey.encryptedAppSecret
+      });
+      console.log(this.fbKey)
     }
   }
   ngOnDestroy(): void {

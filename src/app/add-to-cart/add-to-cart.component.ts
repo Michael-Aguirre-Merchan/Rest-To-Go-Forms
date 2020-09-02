@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {addToCart} from '../models/cart.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-add-to-cart',
@@ -15,7 +16,7 @@ export class AddToCartComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private appService: AppService) { }
   
   ngOnInit(): void { this.initForm(); }
 
@@ -32,6 +33,13 @@ export class AddToCartComponent implements OnInit, OnDestroy {
   submit()  {
     if (this.dataForm.valid) {
       this.AddToCart = this.dataForm.value;
+      this.appService.addToCart ({ 
+        user_unique_id: this.AddToCart.userUniqueId, 
+        cartNotes: this.AddToCart.cartNotes,
+        sku: this.AddToCart.sku,
+        productNotes: this.AddToCart.productNotes,
+        quantity: this.AddToCart.quantity 
+      });
       console.log(this.AddToCart)
     }
   }

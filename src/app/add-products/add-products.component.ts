@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {Products} from '../models/product.model';
+import {Product} from '../models/product.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-add-products',
@@ -9,13 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddProductsComponent implements OnInit, OnDestroy {
 
-  private product: Products;
+  private product: Product;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private appService: AppService) { }
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
@@ -40,6 +41,22 @@ export class AddProductsComponent implements OnInit, OnDestroy {
     submit()  {
       if (this.dataForm.valid) {
         this.product = this.dataForm.value;
+        this.appService.addProduct ({ 
+          id: this.product.id, 
+          uniqueId: this.product.uniqueId,
+          sku: this.product.sku,
+          name: this.product.name,
+          description: this.product.description,
+          imageUrl: this.product.imageUrl,
+          contentUrl: this.product.contentUrl,
+          price: this.product.price,
+          status: this.product.status,
+          enabled: this.product.enabled,
+          openPrice: this.product.openPrice,
+          openStock: this.product.openStock,
+          payload: this.product.payload,
+          qcode: this.product.qcode 
+        });
         console.log(this.product)
       }
     }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { SlackChannel } from '../../models/slack-channel.model';
+import { SlackChannel } from '../../models/slackchannel.model';
 
 @Injectable({
   providedIn: 'root'

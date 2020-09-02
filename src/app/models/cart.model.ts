@@ -1,6 +1,6 @@
-export interface addToCart {
+export class addToCart {
     
-    user_unique_id: string;
+    userUniqueId: string;
     cartNotes: string;
     sku: string;
     productNotes: string;

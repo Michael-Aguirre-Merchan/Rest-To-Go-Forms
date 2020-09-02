@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { companyKeys } from '../models/company-keys.model';
+import { companyKeys } from '../models/companykey.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GatewayService } from '../gateway.service';
 
 @Component({
   selector: 'app-company-keys',
@@ -15,7 +16,7 @@ export class CompanyKeysComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private gatewayService: GatewayService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -34,6 +35,13 @@ export class CompanyKeysComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.CompanyKeys = this.dataForm.value;
+      this.gatewayService.addcompanyKeys ({ 
+        description: this.CompanyKeys.description, 
+        provider: this.CompanyKeys.provider,
+        encripted_api_key: this.CompanyKeys.encriptedApiKey,
+        encrypted_api_secret: this.CompanyKeys.encryptedApiSecret,
+        api_region: this.CompanyKeys.apiRegion
+      });
       console.log(this.CompanyKeys)
     }
   }

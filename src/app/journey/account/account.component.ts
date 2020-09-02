@@ -29,12 +29,10 @@ export class AccountComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.account = this.dataForm.value;
-      this.journeyService.addAccount ({ code: this.account.code, name: this.account.name });
-      this.account = this.dataForm.value;
-        this.journeyService.addAccountDetails ({
-          code: this.account.code,
-          name: this.account.name
-        })
+      this.journeyService.addAccount ({ 
+        code: this.account.code, 
+        name: this.account.name 
+      });
       console.log(this.account)
     }
   }

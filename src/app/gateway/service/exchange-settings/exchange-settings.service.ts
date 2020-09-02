@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { exchangeSettings } from '../../models/exchange-settings.model';
+import { exchangeSettings } from '../../models/exchangesettings.model';
 
 @Injectable({
   providedIn: 'root'

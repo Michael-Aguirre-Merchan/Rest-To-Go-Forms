@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { FbKeys } from '../../models/fb-keys.model';
+import { FbKey } from '../../models/fbkey.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class FbKeysService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: FbKeys) {
+  getRes(myform: FbKey) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({
