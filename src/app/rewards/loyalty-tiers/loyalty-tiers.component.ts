@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { LoyaltyTiers } from '../models/loyalty-tiers.model';
+import { LoyaltyTier } from '../models/loyalty-tier.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RewardsService } from '../rewards.service';
 
 @Component({
   selector: 'app-loyalty-tiers',
@@ -9,13 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoyaltyTiersComponent implements OnInit, OnDestroy {
 
-  private loyaltyTiers: LoyaltyTiers;
+  private loyaltyTier: LoyaltyTier;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private rewardsService: RewardsService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -35,8 +36,19 @@ export class LoyaltyTiersComponent implements OnInit, OnDestroy {
   }
   submit() {
     if (this.dataForm.valid) {
-      this.loyaltyTiers = this.dataForm.value;
-      console.log(this.loyaltyTiers)
+      this.loyaltyTier = this.dataForm.value;
+      this.rewardsService.addLoyaltyTiers ({ 
+        unique_id: this.loyaltyTier.uniqueId, 
+        code: this.loyaltyTier.code,
+        name: this.loyaltyTier.name,
+        next_tier: this.loyaltyTier.nextTier,
+        previous_tier: this.loyaltyTier.previousTier,
+        source: this.loyaltyTier.source,
+        source_alias: this.loyaltyTier.sourceAlias,
+        source_id: this.loyaltyTier.sourceId,
+        source_type: this.loyaltyTier.sourceType,
+      });
+      console.log(this.loyaltyTier)
     }
   }
   ngOnDestroy(): void {

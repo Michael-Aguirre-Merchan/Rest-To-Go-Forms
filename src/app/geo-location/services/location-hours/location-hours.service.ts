@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LocationHours } from '../../models/location-hours.model';
+import { LocationHour } from '../../models/location-hour.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class LocationHoursService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: LocationHours) {
+  getRes(myform: LocationHour) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LoyaltyTiers } from '../../models/loyalty-tiers.model';
+import { LoyaltyTier } from '../../models/loyalty-tier.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class LoyaltyTiersService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: LoyaltyTiers) {
+  getRes(myform: LoyaltyTier) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({

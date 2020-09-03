@@ -23,7 +23,7 @@ export class GeoService {
     return this.http.post(environment.API_23GATEWAY_URL + '/geo/',
       { geo: geoData, });
   }
-  addcompanyKeys(
+  addLocationHours(
     locationHoursData: LocationHoursData
   ): Observable<ApiResponse> {
     return this.http.post(environment.API_23GATEWAY_URL + '/locationhours/',

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CustomerRewards } from '../models/customer-rewards.model';
+import { CustomerReward } from '../models/customer-reward.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RewardsService } from '../rewards.service';
 
 @Component({
   selector: 'app-customer-rewards',
@@ -9,13 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CustomerRewardsComponent implements OnInit, OnDestroy {
 
-  private customerRewards: CustomerRewards;
+  private customerReward: CustomerReward;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private rewardsService: RewardsService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -33,8 +34,17 @@ export class CustomerRewardsComponent implements OnInit, OnDestroy {
   }
   submit() {
     if (this.dataForm.valid) {
-      this.customerRewards = this.dataForm.value;
-      console.log(this.customerRewards)
+      this.customerReward = this.dataForm.value;
+      this.rewardsService.addCustomerRewards ({ 
+        unique_id: this.customerReward.uniqueId, 
+        customer_unique_id: this.customerReward.customerUniqueId,
+        customer_id: this.customerReward.customerId,
+        spent: this.customerReward.spent,
+        points: this.customerReward.points,
+        expire_rule: this.customerReward.expireRule,
+        expiry_at: this.customerReward.expiryAt,
+      });
+      console.log(this.customerReward)
     }
   }
   ngOnDestroy(): void {

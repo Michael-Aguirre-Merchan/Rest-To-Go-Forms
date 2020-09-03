@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Premise } from '../models/premise.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GeoService } from '../geo.service';
 
 @Component({
   selector: 'app-premise',
@@ -13,7 +14,7 @@ export class PremiseComponent implements OnInit, OnDestroy {
   
   private premise: Premise;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private geoService: GeoService) { }
 
   loading = false;
 
@@ -42,6 +43,20 @@ export class PremiseComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.premise = this.dataForm.value;
+      this.geoService.addPremise ({ 
+        parent_id: this.premise.parentId, 
+        premise_type: this.premise.premiseType,
+        floor: this.premise.floor,
+        code: this.premise.code,
+        name: this.premise.name,
+        description: this.premise.description,
+        access_instructions: this.premise.accessInstructions,
+        additional_instructions: this.premise.additionalInstructions,
+        source: this.premise.source,
+        source_alias: this.premise.sourceAlias,
+        source_id: this.premise.sourceId,
+        source_typenotes: this.premise.sourceTypenotes,
+      });
       console.log(this.premise)
     }
   }

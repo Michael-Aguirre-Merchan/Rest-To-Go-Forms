@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { RewardCoupons } from '../models/reward-coupons.model';
+import { RewardCoupon } from '../models/reward-coupon.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RewardsService } from '../rewards.service';
 @Component({
   selector: 'app-reward-coupons',
   templateUrl: './reward-coupons.component.html',
@@ -8,13 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RewardCouponsComponent implements OnInit, OnDestroy {
 
-  private rewardCoupons: RewardCoupons;
+  private rewardCoupon: RewardCoupon;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private rewardsService: RewardsService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -40,8 +41,26 @@ export class RewardCouponsComponent implements OnInit, OnDestroy {
   }
   submit() {
     if (this.dataForm.valid) {
-      this.rewardCoupons = this.dataForm.value;
-      console.log(this.rewardCoupons)
+      this.rewardCoupon = this.dataForm.value;
+      this.rewardsService.addRewardCoupons ({ 
+        unique_id: this.rewardCoupon.uniqueId, 
+        code: this.rewardCoupon.code,
+        name: this.rewardCoupon.name,
+        description: this.rewardCoupon.description,
+        coupon_code: this.rewardCoupon.couponCode,
+        country_id: this.rewardCoupon.countryId,
+        country_name: this.rewardCoupon.countryName,
+        currency_unique_id: this.rewardCoupon.currencyUniqueId,
+        currency_code: this.rewardCoupon.currencyCode,
+        currency_name: this.rewardCoupon.currencyName,
+        money_threshold: this.rewardCoupon.moneyThreshold,
+        points_threshold: this.rewardCoupon.pointsThreshold,
+        source: this.rewardCoupon.source,
+        source_alias: this.rewardCoupon.sourceAlias,
+        source_id: this.rewardCoupon.sourceId,
+        source_type: this.rewardCoupon.sourceType,
+      });
+      console.log(this.rewardCoupon)
     }
   }
   ngOnDestroy(): void {

@@ -1,33 +1,33 @@
-export interface Geo {
+export class Geo {
 
-    owner_unique_id: string, 
-    owner_type: string,
-    country_code: string,
-    country_name: string,
-    admin1_code: string,
-    admin1_name: string,
-    admin2_code: string,
-    admin2_name: string,
-    admin3_code: string,
-    admin3_name: string,
-    admin4_code: string,
-    admin4_name: string,
-    admin5_code: string,
-    admin5_name: string,
-    admin6_code: string,
-    admin6_name: string
-    postal_code: string,
-    address: string,
-    premise: string,
-    code: string,
-    name: string,
-    first_name :string,
-    middle_name: string,
-    last_name: string,
-    organization: string,
-    latitude: number, 
-    longitude: number,
-    qcode: string,
-    payload: string,
+    ownerUniqueId: string; 
+    ownerType: string;
+    countryCode: string;
+    countryName: string;
+    admin1Code: string;
+    admin1Name: string;
+    admin2Code: string;
+    admin2Name: string;
+    admin3Code: string;
+    admin3Name: string;
+    admin4Code: string;
+    admin4Name: string;
+    admin5Code: string;
+    admin5Name: string;
+    admin6Code: string;
+    admin6Name: string
+    postalCode: string;
+    address: string;
+    premise: string;
+    code: string;
+    name: string;
+    firstName :string;
+    middleName: string;
+    lastName: string;
+    organization: string;
+    latitude: number; 
+    longitude: number;
+    qcode: string;
+    payload: string;
     
 }

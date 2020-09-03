@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { LocationHours } from '../models/location-hours.model';
+import { LocationHour } from '../models/location-hour.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GeoService } from '../geo.service';
 
 @Component({
   selector: 'app-location-hours',
@@ -10,9 +11,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LocationHoursComponent implements OnInit, OnDestroy {
   dataForm: FormGroup;
   
-  private locationHours: LocationHours;
+  private locationHour: LocationHour;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private geoService: GeoService) { }
 
   loading = false;
 
@@ -35,8 +36,17 @@ export class LocationHoursComponent implements OnInit, OnDestroy {
   }
   submit() {
     if (this.dataForm.valid) {
-      this.locationHours = this.dataForm.value;
-      console.log(this.locationHours)
+      this.locationHour = this.dataForm.value;
+      this.geoService.addLocationHours ({ 
+        day_name: this.locationHour.dayName, 
+        open_at: this.locationHour.openAt,
+        close_at: this.locationHour.closeAt,
+        shift_id: this.locationHour.shiftId,
+        shift_name: this.locationHour.shiftName,
+        shift_start_time: this.locationHour.shiftStartTime,
+        shift_end_time: this.locationHour.shiftEndTime,
+      });
+      console.log(this.locationHour)
     }
   }
   ngOnDestroy(): void {

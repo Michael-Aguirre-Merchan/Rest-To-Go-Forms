@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PurchaseTresholds } from '../models/purchase-thresholds.model';
+import { PurchaseTreshold } from '../models/purchase-threshold.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RewardsService } from '../rewards.service';
 
 @Component({
   selector: 'app-purchase-thresholds',
@@ -9,13 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PurchaseThresholdsComponent implements OnInit, OnDestroy {
 
-  private purchaseTresholds: PurchaseTresholds;
+  private purchaseTreshold: PurchaseTreshold;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private rewardsService: RewardsService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -30,8 +31,14 @@ export class PurchaseThresholdsComponent implements OnInit, OnDestroy {
   }
   submit() {
     if (this.dataForm.valid) {
-      this.purchaseTresholds = this.dataForm.value;
-      console.log(this.purchaseTresholds)
+      this.purchaseTreshold = this.dataForm.value;
+      this.rewardsService.addPurchaseTresholds ({ 
+        unique_id: this.purchaseTreshold.uniqueId, 
+        name: this.purchaseTreshold.name,
+        threshold: this.purchaseTreshold.threshold,
+        extra_points: this.purchaseTreshold.extraPoints,
+      });
+      console.log(this.purchaseTreshold)
     }
   }
   ngOnDestroy(): void {

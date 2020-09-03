@@ -1,10 +1,10 @@
-export interface Area {
+export class Area {
 
-    code: string,
-    name: string,
-    address_unique_id: string
-    source: string,
-    area_type: number,
-    area_points: number
+    code: string;
+    name: string;
+    addressUniqueId: string
+    source: string;
+    areaType: number;
+    areaPoints: number
 
 }

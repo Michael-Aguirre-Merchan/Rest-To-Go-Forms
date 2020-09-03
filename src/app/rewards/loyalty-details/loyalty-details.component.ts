@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { LoyaltyDetails } from '../models/loyalty-details.model';
+import { LoyaltyDetail } from '../models/loyalty-detail.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RewardsService } from '../rewards.service';
 
 @Component({
   selector: 'app-loyalty-details',
@@ -9,13 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoyaltyDetailsComponent implements OnInit, OnDestroy {
 
-  private loyaltyDetails: LoyaltyDetails;
+  private loyaltyDetail: LoyaltyDetail;
 
   dataForm: FormGroup;
 
   loading = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private rewardsService: RewardsService) { }
 
   ngOnInit(): void { this.initForm(); }
 
@@ -39,8 +40,23 @@ export class LoyaltyDetailsComponent implements OnInit, OnDestroy {
   }
   submit() {
     if (this.dataForm.valid) {
-      this.loyaltyDetails = this.dataForm.value;
-      console.log(this.loyaltyDetails)
+      this.loyaltyDetail = this.dataForm.value;
+      this.rewardsService.addLoyaltyDetails ({ 
+        loyalty_tier: this.loyaltyDetail.loyaltyTier, 
+        unique_id: this.loyaltyDetail.uniqueId,
+        name: this.loyaltyDetail.name,
+        country_id: this.loyaltyDetail.countryId,
+        country_name: this.loyaltyDetail.countryName,
+        currency_unique_id: this.loyaltyDetail.currencyUniqueId,
+        currency_code: this.loyaltyDetail.currencyCode,
+        currency_name: this.loyaltyDetail.currencyName,
+        minimum_spend: this.loyaltyDetail.minimumSpend,
+        maximum_spend: this.loyaltyDetail.maximumSpend,
+        minimum_points: this.loyaltyDetail.minimumPoints,
+        maximum_points: this.loyaltyDetail.maximumPoints,
+        default_tier: this.loyaltyDetail.defaultTier,
+      });
+      console.log(this.loyaltyDetail)
     }
   }
   ngOnDestroy(): void {

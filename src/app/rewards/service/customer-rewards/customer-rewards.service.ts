@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CustomerRewards } from '../../models/customer-rewards.model';
+import { CustomerReward } from '../../models/customer-reward.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class CustomerRewardsService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: CustomerRewards) {
+  getRes(myform: CustomerReward) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({

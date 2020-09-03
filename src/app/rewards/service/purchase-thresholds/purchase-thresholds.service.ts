@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { PurchaseTresholds } from '../../models/purchase-thresholds.model';
+import { PurchaseTreshold } from '../../models/purchase-threshold.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class PurchaseThresholdsService {
   constructor(private http: HttpClient) {
   }
  
-  getRes(myform: PurchaseTresholds) {
+  getRes(myform: PurchaseTreshold) {
     const data = {...myform}
         const httpOptions = {
       headers: new HttpHeaders({

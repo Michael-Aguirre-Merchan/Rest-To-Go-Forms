@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Area } from '../models/area.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GeoService } from '../geo.service';
 
 @Component({
   selector: 'app-area',
@@ -12,7 +13,7 @@ export class AreaComponent implements OnInit, OnDestroy {
   
   private area: Area;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private geoService: GeoService) { }
 
   loading = false;
 
@@ -35,6 +36,14 @@ export class AreaComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.area = this.dataForm.value;
+      this.geoService.addArea ({ 
+        code: this.area.code, 
+        name: this.area.name,
+        address_unique_id: this.area.addressUniqueId,
+        source: this.area.source,
+        area_type: this.area.areaType,
+        area_points: this.area.areaPoints,
+      });
       console.log(this.area )
     }
   }
