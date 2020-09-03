@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddProductsComponent } from './add-products/add-products.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { JourneyModule } from './journey/journey.module';
 import { GeoLocationModule } from './geo-location/geo-location.module'
 import { MatSelectModule } from '@angular/material/select';
@@ -20,9 +17,6 @@ import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
-    AddProductsComponent,
-    CategoriesComponent,
-    AddToCartComponent,
   ],
   imports: [
     BrowserModule,

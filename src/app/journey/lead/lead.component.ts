@@ -43,7 +43,7 @@ export class LeadComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.lead = this.dataForm.value;
-      this.journeyService.addAccountDetails ({
+      this.journeyService.addLead ({
         first_name: this.lead.firstName,
         middle_name: this.lead.middleName,
         last_name: this.lead.lastName,

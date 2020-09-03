@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   submit() {
     if (this.dataForm.valid) {
       this.contact = this.dataForm.value;
-      this.journeyService.addAccountDetails ({
+      this.journeyService.addContact ({
         first_name: this.contact.firstName,
         middle_name: this.contact.middleName, 
         last_name: this.contact.lastName,

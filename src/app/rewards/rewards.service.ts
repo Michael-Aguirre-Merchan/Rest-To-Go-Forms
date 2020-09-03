@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { CustomerRewardsData, LoyaltyDetailsData, LoyaltyTiersData, PurchaseTresholdsData, RewardCouponsData } from './interface';
+import { CustomerRewardsData, LoyaltyDetailsData, LoyaltyTiersData, PurchaseTresholdsData, RewardCouponsData } from './rewards.interface';
 
 @Injectable({
   providedIn: 'root'

@@ -38,7 +38,7 @@ export class QuoteComponent implements OnInit, OnDestroy {
     submit()  {
       if (this.dataForm.valid) {
         this.quote = this.dataForm.value;
-        this.journeyService.addAccountDetails ({
+        this.journeyService.addQuote ({
           code: this.quote.code,
           name: this.quote.name,
           notes: this.quote.notes,

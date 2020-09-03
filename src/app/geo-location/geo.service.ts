@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { AreaData, GeoData, LocationHoursData, LocationData, PremiseData } from './interface';
+import { AreaData, GeoData, LocationHoursData, LocationData, PremiseData } from './geo-location.interface';
 
 @Injectable({
   providedIn: 'root'

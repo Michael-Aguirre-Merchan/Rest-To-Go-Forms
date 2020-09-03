@@ -40,7 +40,7 @@ export class FollowUpsComponent implements OnInit, OnDestroy {
     submit()  {
       if (this.dataForm.valid) {
         this.followUp = this.dataForm.value;
-        this.journeyService.addAccountDetails ({
+        this.journeyService.addFollowUps ({
           code: this.followUp.code,
           notes: this.followUp.notes,
           next_action_at: this.followUp.nextActionAt,

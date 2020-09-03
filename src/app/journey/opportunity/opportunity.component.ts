@@ -42,7 +42,7 @@ export class OpportunityComponent implements OnInit, OnDestroy {
     submit()  {
       if (this.dataForm.valid) {
         this.opportunity = this.dataForm.value;
-        this.journeyService.addAccountDetails ({
+        this.journeyService.addOpportunity ({
           code: this.opportunity.code,
           name: this.opportunity.name,
           notes: this.opportunity.notes,

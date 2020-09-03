@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { ProductData, addToCartData, CategoriesData } from './interface';
+import { ProductData, addToCartData, CategoriesData } from './products.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AppService {
+export class ProductsService {
 
   constructor() { }
 

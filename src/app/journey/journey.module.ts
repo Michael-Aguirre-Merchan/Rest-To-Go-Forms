@@ -15,10 +15,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { QuoteComponent } from './quote/quote.component';
 import { OpportunityComponent } from './opportunity/opportunity.component';
 import { FollowUpsComponent } from './follow-ups/follow-ups.component';
-import { AccountDetailsComponent } from './account-details/account-details.component';
+import { accountDetailsComponent } from './account-details/account-details.component';
 
 @NgModule({
-  declarations: [AccountComponent, ContactComponent, LeadComponent, QuoteComponent, OpportunityComponent, FollowUpsComponent, AccountDetailsComponent],
+  declarations: [AccountComponent, ContactComponent, LeadComponent, QuoteComponent, OpportunityComponent, FollowUpsComponent, accountDetailsComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Product} from '../models/product.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AppService } from '../app.service';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-add-products',
@@ -16,7 +16,7 @@ export class AddProductsComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  constructor(private fb: FormBuilder, private appService: AppService) { }
+  constructor(private fb: FormBuilder, private productsService: ProductsService) { }
   ngOnInit(): void { this.initForm(); }
 
   initForm() {
@@ -41,7 +41,7 @@ export class AddProductsComponent implements OnInit, OnDestroy {
     submit()  {
       if (this.dataForm.valid) {
         this.product = this.dataForm.value;
-        this.appService.addProduct ({ 
+        this.productsService.addProduct ({ 
           id: this.product.id, 
           uniqueId: this.product.uniqueId,
           sku: this.product.sku,
