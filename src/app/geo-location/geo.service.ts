@@ -26,19 +26,19 @@ export class GeoService {
   addLocationHours(
     locationHoursData: LocationHoursData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/locationhours/',
+    return this.http.post(environment.API_23GEO_URL + '/locationhours/',
       { locationHours: locationHoursData, });
   }
   addLocation(
     locationData: LocationData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/location/',
+    return this.http.post(environment.API_23GEO_URL + '/location/',
       { location: locationData, });
   }
   addPremise(
     premiseData: PremiseData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/premise/',
+    return this.http.post(environment.API_23GEO_URL + '/premise/',
       { premise: premiseData, });
   }
 

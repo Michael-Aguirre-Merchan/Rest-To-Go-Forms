@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { CampaignData, FbKeysData, MediaData } from './interface';
+import { CampaignData, FbKeysData, MediaData } from './campaign.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -14,19 +14,19 @@ export class CampaignsService {
   addCampaign(
     campaignData: CampaignData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/campaign/',
+    return this.http.post(environment.API_23CAMPAIGNS_URL + '/campaign/',
       { campaign: campaignData, });
   }
   addFbKeys(
     fbKeysData: FbKeysData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/fbkeys/',
+    return this.http.post(environment.API_23CAMPAIGNS_URL + '/fbkeys/',
       { fbKeys: fbKeysData, });
   }
   addMedia(
     mediaData: MediaData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/media/',
+    return this.http.post(environment.API_23CAMPAIGNS_URL + '/media/',
       { media: mediaData, });
   }
 

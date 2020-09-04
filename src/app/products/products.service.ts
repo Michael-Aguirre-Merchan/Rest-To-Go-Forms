@@ -14,19 +14,19 @@ export class ProductsService {
   addProduct(
     productData: ProductData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/product/',
+    return this.http.post(environment.API_23PRODUCTS_URL + '/product/',
       { product: productData, });
   }
   addToCart(
     addToCartData: addToCartData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/addtocart/',
+    return this.http.post(environment.API_23PRODUCTS_URL + '/addtocart/',
       { addToCart: addToCartData, });
   }
   addCategories(
     categoriesData: CategoriesData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23GATEWAY_URL + '/categories/',
+    return this.http.post(environment.API_23PRODUCTS_URL + '/categories/',
       { categories: categoriesData, });
   }
 
