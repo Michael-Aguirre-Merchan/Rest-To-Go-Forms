@@ -1,11 +1,11 @@
-export interface CustomerReward {
+export class CustomerReward {
 
-    uniqueId: string,
-    customerUniqueId: string,  
-    customerId: string,  
-    spent: number,  
-    points: number,  
-    expireRule: string, 
-    expiryAt: string,
+    uniqueId: string;
+    customerUniqueId: string;  
+    customerId: string;  
+    spent: number;  
+    points: number;  
+    expireRule: string; 
+    expiryAt: string;
 
 }

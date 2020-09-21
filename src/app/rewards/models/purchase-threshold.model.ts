@@ -1,8 +1,8 @@
-export interface PurchaseTreshold {
+export class PurchaseTreshold {
 
-    uniqueId: string,
-    name: string,
-    threshold: number,  
-    extraPoints: number,  
+    uniqueId: string;
+    name: string;
+    threshold: number;  
+    extraPoints: number;  
 
 }
