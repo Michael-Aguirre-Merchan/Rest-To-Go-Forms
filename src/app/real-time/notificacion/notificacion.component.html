@@ -1,1 +1,103 @@
-<p>notificacion works!</p>
+<!--<kt-portle>
+    <kt-portlet-header title="Products"> </kt-portlet-header>
+    <kt-portlet-body>-->
+        <form [formGroup]="dataForm">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Source</mat-label>
+                    <input matInput type="text" placeholder="Source" formControlName="source">
+                    <mat-error>Source is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Id</mat-label>
+                    <input matInput type="text" placeholder="Source Id" formControlName="source_id">
+                    <mat-error>Source Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Alias</mat-label>
+                    <input matInput type="text" placeholder="Source Alias" formControlName="source_alias">
+                    <mat-error>Source Alias is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Target Type</mat-label>
+                    <input matInput type="text" placeholder="Target Type" formControlName="target_type">
+                    <mat-error>Target Type is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Target Id</mat-label>
+                    <input matInput type="text" placeholder="Target Id" formControlName="target_id">
+                    <mat-error>Target Id is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Alias</mat-label>
+                    <input matInput type="text" placeholder="Source Alias" formControlName="source_alias">
+                    <mat-error>Source Alias is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Target</mat-label>
+                    <input matInput type="text" placeholder="Target" formControlName="target">
+                    <mat-error>Target is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Target Alias</mat-label>
+                    <input matInput type="text" placeholder="Target Alias" formControlName="target_alias">
+                    <mat-error>Target Alias is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Source Type</mat-label>
+                    <input matInput type="text" placeholder="Source Type" formControlName="source_type">
+                    <mat-error>Source Type is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Target Email</mat-label>
+                    <input matInput type="text" placeholder="Target Email" formControlName="target_email">
+                    <mat-error>Target Email is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Target Phone</mat-label>
+                    <input matInput type="text" placeholder="Target Phone" formControlName="target_phone">
+                    <mat-error>Target Phone is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Target Device Id</mat-label>
+                    <input matInput type="text" placeholder="Target Device Id" formControlName="target_device_id">
+                    <mat-error>Target Device Id is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Content</mat-label>
+                    <input matInput type="text" placeholder="Content" formControlName="content">
+                    <mat-error>Content is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Url</mat-label>
+                    <input matInput type="text" placeholder="Url" formControlName="url">
+                    <mat-error>Url is required </mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Multichannel</mat-label>
+                    <input matInput type="text" placeholder="Multichannel" formControlName="multichannel">
+                    <mat-error>Multichannel is required</mat-error>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <!--  <button (click)="submit()"
+                                        [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Submit</button>
+                                -->
+            </div>
+        </form>
+        <!-- </kt-portlet-body>
+                                                 <kt-portlet-footer> (footer info) </kt-portlet-footer>
+                                             </kt-portle>-->

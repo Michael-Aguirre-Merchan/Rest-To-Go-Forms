@@ -14,19 +14,19 @@ export class RealTimeService {
   addMensaje(
     mensajeData: MensajeData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23CRM_URL + '/leads/',
+    return this.http.post(environment.API_23CRM_URL + '/mensaje/',
       { mensaje: mensajeData, });
   }
   addNotificacion(
     notificacionData: NotificacionData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23CRM_URL + '/account/',
+    return this.http.post(environment.API_23CRM_URL + '/notificacion/',
       { notificacion: notificacionData, });
   }
   addSettings(
     settingsData:SettingsData
   ): Observable<ApiResponse> {
-    return this.http.post(environment.API_23CRM_URL + '/accountdetails/',
+    return this.http.post(environment.API_23CRM_URL + '/settings/',
       { settings: settingsData, });
   }
 
