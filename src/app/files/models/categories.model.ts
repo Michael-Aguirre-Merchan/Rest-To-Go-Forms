@@ -1,13 +1,13 @@
 export class Categories {
 
-    unique_id: string;  
+    uniqueId: string;  
     code: string;  
     name: string;  
     description: string;  
-    parent_id: number;
-    display_order: number;  
-    image_url: string;  
-    content_url: string;  
+    parentId: number;
+    displayOrder: number;  
+    imageUrl: string;  
+    contentUrl: string;  
     status: string;  
     enabled: string;  
     payload: string;

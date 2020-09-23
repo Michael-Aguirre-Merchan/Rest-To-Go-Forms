@@ -1,23 +1,23 @@
 export class Files {
 
-    unique_id: string;
-    user_identity_unique_id: string;  
-    user_unique_id: string;  
+    uniqueId: string;
+    userIdentityUniqueId: string;  
+    userUniqueId: string;  
     status: string;
     enabled: string;  
     bucket: string; 
     name: string; 
     url: string;  
     thumbnail: string;  
-    file_type: string; 
-    file_size: number; 
+    fileType: string; 
+    fileSize: number; 
     description: string;  
-    original_name: string; 
-    original_file: string;  
-    category_unique_id: string;  
-    category_name: string;  
-    created_by: string;  
-    updated_by: string;  
+    originalName: string; 
+    originalFile: string;  
+    categoryUniqueId: string;  
+    categoryName: string;  
+    createdBy: string;  
+    updatedBy: string;  
     payload: string;
 
 }
