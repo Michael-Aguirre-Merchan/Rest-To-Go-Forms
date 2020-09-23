@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { CategoriesData, FilesData } from './files.interface';
+import { CategoriesData, FilesData, PresignUploadData } from './files.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +23,10 @@ export class FilesService {
     return this.http.post(environment.API_23GATEWAY_URL + '/files/',
       { filesData: filesData, });
   }
-
+  addPresignUpload(
+    presignUploadData: PresignUploadData
+  ): Observable<ApiResponse> {
+    return this.http.post(environment.API_23GATEWAY_URL + '/upload/',
+      { presignUpload: presignUploadData, });
+  }
 }

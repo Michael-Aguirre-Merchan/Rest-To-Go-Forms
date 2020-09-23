@@ -37,3 +37,9 @@ export interface CategoriesData {
     payload: string;
 
 }
+
+export interface PresignUploadData {
+
+    filename: string;
+
+}
